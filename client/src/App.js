@@ -10,6 +10,7 @@ import Navbar from './Components/Navbar.jsx';
 import lightTheme from './LightTheme'; 
 import darkTheme from './DarkTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import { HashLink } from 'react-router-hash-link';
 
 function App(props) {
   
@@ -24,13 +25,10 @@ function App(props) {
       <CssBaseline />
         <Router>
           <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path="/AboutMe" element={<AboutMe />} />
-            <Route path="/Experience" element={<Experience />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contact" element={<Contact />} />
-          </Routes>
+          <Home />
+          <AboutMe />
+          <Experience />
+          <Contact />
         </Router>
     </ThemeProvider>
   );
