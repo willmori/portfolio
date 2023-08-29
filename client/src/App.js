@@ -7,7 +7,7 @@ import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar.jsx';
-import lightTheme from './LightTheme'; // Import your light theme
+import lightTheme from './LightTheme'; 
 import darkTheme from './DarkTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 

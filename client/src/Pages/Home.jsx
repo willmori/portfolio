@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Grid, Container, Typography, Button, Avatar, Box, IconButton } from '@mui/material';
+import { Grid, Container, Typography, Button, Avatar, Box, IconButton, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Resume from '../assets/Resume.png'
 import { useTheme } from '@mui/material';
@@ -13,6 +13,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Home = () => {
     const theme = useTheme();
+
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, 1300)
+        
+    }, []);
 
     return (
         <Grid style={{ height: 'calc(100vh - 84px)', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
@@ -38,7 +47,7 @@ const Home = () => {
                     <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px'}} href={Resume} target="_blank">
                         Resume
                     </Button>
-                    <Container style={{display: 'flex', justifyContent: 'end'}}>
+                    <Container style={{display: 'flex', justifyContent: 'end', position: 'absolute'}}>
                         <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
                             <Box m={1}>
                                 <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
@@ -93,10 +102,11 @@ const Home = () => {
                                 </IconButton>
                             </Box>
                         </Fade>
+                        
                     </Container>
+                    <div style={{borderBottom: `2px solid ${theme.palette.primary.textContrast}`, width: '300px', position: 'relative', left: '1380px', top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.3s ease-in-out' : '' }}></div>
                 </Container>
             </Fade>
-            
         </Grid>
         
     );
