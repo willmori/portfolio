@@ -1,19 +1,22 @@
 import React, {useState, useEffect} from 'react';
-import { Grid, Container, Typography, Button, Avatar } from '@mui/material';
+import { Grid, Container, Typography, Button, Avatar, Box, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Resume from '../assets/Resume.png'
 import { useTheme } from '@mui/material';
 import Photo from '../assets/suit_photo.jpg';
 import Fade from '@mui/material/Fade';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+
 
 const Home = () => {
-
     const theme = useTheme();
-    console.log(theme)
 
     return (
         <Grid style={{ height: 'calc(100vh - 84px)', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
-            <Fade in timeout={1500}>
+            <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
                 <Container style={{ paddingTop: '35px'}}>
                     <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
                         <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
@@ -35,6 +38,62 @@ const Home = () => {
                     <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px'}} href={Resume} target="_blank">
                         Resume
                     </Button>
+                    <Container style={{display: 'flex', justifyContent: 'end'}}>
+                        <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
+                            <Box m={1}>
+                                <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
+                                                    "&:hover": {
+                                                    backgroundColor: "transparent",
+                                                    }
+                                                }}>
+                                    <GitHubIcon sx={{
+                                                        height: '30px',
+                                                        width: '30px', 
+                                                        color: theme.palette.primary.contrastText,
+                                                        transition: 'transform 0.4s',
+                                                        "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
+                                                    }}>
+                                    </GitHubIcon>
+                                </IconButton>  
+                            </Box>
+                        </Fade>
+                        <Fade in timeout={1500} style={{transitionDelay: '700ms'}}>
+                            <Box m={1}>
+                                <IconButton href='https://www.linkedin.com/in/william-mori-01b891251' target={"_blank"} sx={{
+                                                    "&:hover": {
+                                                    backgroundColor: "transparent",
+                                                    }
+                                                }}>
+                                    <LinkedInIcon sx={{
+                                                        height: '30px',
+                                                        width: '30px', 
+                                                        color: theme.palette.primary.contrastText,
+                                                        transition: 'transform 0.4s',
+                                                        "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
+                                                    }}>
+                                    </LinkedInIcon>
+                                </IconButton>
+                            </Box>
+                        </Fade>
+                        <Fade in timeout={1500} style={{transitionDelay: '900ms'}}>
+                            <Box m={1}>
+                                <IconButton href='https://www.instagram.com/will_mori' target={"_blank"} sx={{
+                                                    "&:hover": {
+                                                    backgroundColor: "transparent",
+                                                    }
+                                                }}>
+                                    <InstagramIcon sx={{
+                                                        height: '30px',
+                                                        width: '30px', 
+                                                        color: theme.palette.primary.contrastText,
+                                                        transition: 'transform 0.4s',
+                                                        "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)' }
+                                                    }}>
+                                    </InstagramIcon>
+                                </IconButton>
+                            </Box>
+                        </Fade>
+                    </Container>
                 </Container>
             </Fade>
             
