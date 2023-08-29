@@ -31,7 +31,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             <Toolbar style={{  display: 'flex', justifyContent: 'end' }}>
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <Fade in timeout={1500} style={{transitionDelay: '0ms'}}>
-                        <ListItem component={HashLink} to="#home" smooth button sx={{
+                        <ListItem component={HashLink} to="#top" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
