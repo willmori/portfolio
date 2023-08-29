@@ -13,22 +13,23 @@ const darkTheme = createTheme({
     },
     components: {
         MuiButton: {
-        styleOverrides: {
-            root: {
-            backgroundColor: 'transparent',
-            border: '2px solid rgb(125, 220, 195)',
-            color: 'rgb(125, 220, 195)'
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'transparent',
+                    border: '2px solid rgb(125, 220, 195)',
+                    color: 'rgb(125, 220, 195)'
+                },
             },
-        },
         },
         MuiAvatar: {
             styleOverrides: {
-            root: {
-                height: '85px',
-                width: '85px'
-            },
+                root: {
+                    height: '85px',
+                    width: '85px'
+                },
             },
         },
+       
     },
 });
 
