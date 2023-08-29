@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect} from 'react';
+import { Button } from '@mui/material';
 
-function App() {
+const Home = () => {
   const [testData, setTestData] = useState();
   useEffect(() => {
     fetch("/api")
@@ -17,6 +18,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {JSON.stringify(testData)}
+        <Button>TEST</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
