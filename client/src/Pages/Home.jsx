@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { Button } from '@mui/material';
 
-const Experience = () => {
+const Home = () => {
  
 
   return (
     <div className="App">
-      Experience 
+      HOME PAGE
     </div>
   );
 }
 
-export default Experience;
+export default Home;
