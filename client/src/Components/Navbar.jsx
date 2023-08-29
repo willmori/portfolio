@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, List, ListItem, ListItemText, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
@@ -9,10 +9,26 @@ import { HashLink } from 'react-router-hash-link';
 const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
     const theme = useTheme();
+
+    const [isNavVisible, setIsNavVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const isScrollingUp = prevScrollPos > currentScrollPos;
+
+            setIsNavVisible(isScrollingUp || currentScrollPos < 10);
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
         
     return (
-        <AppBar position="static" style={{ background: theme.palette.primary.main, boxShadow: 'none', padding: '10px'}}>
-            <Toolbar style={{ display: 'flex', justifyContent: 'end' }}>
+        <AppBar position="sticky" style={{ background: theme.palette.primary.main, padding: '10px', boxShadow: window.pageYOffset == 0 ? 'none' : '', transition: 'transform 0.3s', transform: isNavVisible ? 'translateY(0)' : 'translateY(-100%)'}}>
+            <Toolbar style={{  display: 'flex', justifyContent: 'end' }}>
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <Fade in timeout={1500} style={{transitionDelay: '0ms'}}>
                         <ListItem component={HashLink} to="#home" smooth button sx={{

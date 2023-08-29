@@ -24,11 +24,14 @@ function App(props) {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
         <Router>
-          <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-          <Home />
-          <AboutMe />
-          <Experience />
-          <Contact />
+          <div style={{background: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main}}>
+            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+            <Home />
+            <AboutMe />
+            <Experience />
+            <Contact />
+          </div>
+            
         </Router>
     </ThemeProvider>
   );
