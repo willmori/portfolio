@@ -20,11 +20,10 @@ const Home = () => {
         setTimeout(() => {
             setIsLoaded(true);
         }, 1300)
-        
     }, []);
 
     return (
-        <Grid id="home" style={{ height: 'calc(100vh - 84px)', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
+        <Grid id="home" style={{ height: '90vh', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
             <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
                 <Container style={{ paddingTop: '35px'}}>
                     <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
@@ -104,7 +103,8 @@ const Home = () => {
                         </Fade>
                         
                     </Container>
-                    <div style={{borderBottom: `2px solid ${theme.palette.primary.textContrast}`, width: '300px', position: 'relative', left: '1380px', top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.3s ease-in-out' : '' }}></div>
+                    <div style={{borderBottom: `2px solid ${theme.palette.primary.textContrast}`, width: '300px', position: 'relative', left: '1380px', 
+                                top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.3s ease-in-out' : '' }}></div>
                 </Container>
             </Fade>
         </Grid>
