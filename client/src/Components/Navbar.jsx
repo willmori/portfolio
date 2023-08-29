@@ -2,16 +2,15 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, List, ListItem, ListItemText, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
-import Photo from '../assets/suit_photo.jpg';
+import ThemeToggle from './ThemeToggle';
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
     const theme = useTheme();
         
     return (
         <AppBar position="static" style={{ background: theme.palette.primary.main, boxShadow: 'none', padding: '10px'}}>
             <Toolbar style={{ display: 'flex', justifyContent: 'end' }}>
-                
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <ListItem component={Link} to="/" button>
                         <Typography style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
@@ -34,7 +33,7 @@ const Navbar = () => {
                         <ListItemText primary="Contact" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
                     </ListItem>
                 </List>
-                {/* Add more navigation links here */}
+                <ThemeToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} style={{paddingLeft: '30px'}}></ThemeToggle>
             </Toolbar>
         </AppBar>
     );
