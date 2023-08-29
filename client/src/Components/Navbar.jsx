@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
 import ThemeToggle from './ThemeToggle';
 
+
 const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
     const theme = useTheme();
@@ -33,7 +34,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         <ListItemText primary="Contact" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
                     </ListItem>
                 </List>
-                <ThemeToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} style={{paddingLeft: '30px'}}></ThemeToggle>
+                <ThemeToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}></ThemeToggle>
             </Toolbar>
         </AppBar>
     );
