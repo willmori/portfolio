@@ -13,20 +13,20 @@ const lightTheme = createTheme({
     },
     components: {
         MuiButton: {
-        styleOverrides: {
-            root: {
-            backgroundColor: 'transparent',
-            border: '2px solid rgb(85,145,140)',
-            color: 'rgb(85,145,140)'
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'transparent',
+                    border: '2px solid rgb(85,145,140)',
+                    color: 'rgb(85,145,140)'
+                },
             },
-        },
         },
         MuiAvatar: {
             styleOverrides: {
-            root: {
-                height: '85px',
-                width: '85px'
-            },
+                root: {
+                    height: '85px',
+                    width: '85px'
+                },
             },
         },
     },
