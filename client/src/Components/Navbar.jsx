@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
 import ThemeToggle from './ThemeToggle';
 import Fade from '@mui/material/Fade';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
@@ -14,7 +15,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             <Toolbar style={{ display: 'flex', justifyContent: 'end' }}>
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <Fade in timeout={1500} style={{transitionDelay: '0ms'}}>
-                        <ListItem component={Link} to="/" button sx={{
+                        <ListItem component={HashLink} to="#home" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -26,7 +27,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '200ms'}}>
-                        <ListItem component={Link} to="/AboutMe" button sx={{
+                        <ListItem component={HashLink} to="#aboutme" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -38,7 +39,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '400ms'}}>
-                        <ListItem component={Link} to="/Experience" button sx={{
+                        <ListItem component={HashLink} to="#experience" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -50,7 +51,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
-                        <ListItem component={Link} to="/Projects" button sx={{
+                        <ListItem component={HashLink} to="#projects" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -62,7 +63,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>
-                        <ListItem component={Link} to="/Contact" button sx={{
+                        <ListItem component={HashLink} to="#contact" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",

@@ -24,7 +24,7 @@ const Home = () => {
     }, []);
 
     return (
-        <Grid style={{ height: 'calc(100vh - 84px)', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
+        <Grid id="home" style={{ height: 'calc(100vh - 84px)', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
             <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
                 <Container style={{ paddingTop: '35px'}}>
                     <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>

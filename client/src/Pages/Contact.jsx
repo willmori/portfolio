@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
 const Contact = () => {
  
 
   return (
-    <div className="App">
-      Contact
-    </div>
+    <Grid style={{height: '100vh'}} id="contact">
+        Contact
+    </Grid>
+      
   );
 }
 
