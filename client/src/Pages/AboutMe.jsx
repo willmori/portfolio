@@ -23,7 +23,7 @@ const AboutMe = () => {
                     <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
                         <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
                         <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>About Me</Typography>
-                        <div style={{borderBottom: `1px solid ${theme.palette.primary.textSecondary}`, width: '260px', marginLeft: '30px'}}></div>
+                        <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                     </Container>
                     <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                         {aboutMeContent.paragraph1}
