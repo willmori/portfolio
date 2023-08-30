@@ -2,7 +2,7 @@ import './StarryNight.css';
 import React from 'react';
 import anime from 'animejs';
 
-class StarrySky extends React.Component {
+class StarryNight extends React.Component {
     state = {
       num: 60,
       vw: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
@@ -97,4 +97,4 @@ class StarrySky extends React.Component {
     }
   }
   
-  export default StarrySky;
+  export default StarryNight;

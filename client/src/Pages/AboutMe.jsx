@@ -4,14 +4,21 @@ import { useTheme } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Casual from '../assets/Casual.JPG';
 import { aboutMeContent } from '../Content/AboutMe';
+import { useInView } from 'react-intersection-observer';
+import './AboutMe.css';
 
 const AboutMe = () => {
 
     const theme = useTheme();
+
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Trigger only once
+        threshold: 0.1, // Percentage of component visibility to trigger
+      });
  
     return (
         <Grid style={{height: '90vh', paddingTop: '100px'}} id="aboutme">
-            <Container style={{width: '1000px', display: 'flex'}}>
+            <Container ref={ref} style={{width: '1000px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                 <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
                         <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>

@@ -41,7 +41,7 @@ const Home = () => {
                     <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
                         I'm a software engineer who specializes in full-stack development.<br></br>
                         I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
-                        Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called&nbsp;<Link style={{color: theme.palette.primary.textPrimary}} to={'https://metalinguist.com'} target="_blank">Metalinguist</Link>.
+                        Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called&nbsp;<Link style={{color: theme.palette.primary.textPrimary}} to={'http://metalinguist.com'} target="_blank">Metalinguist</Link>.
                     </Typography>
                     <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px'}} href={Resume} target="_blank">
                         Resume
@@ -104,7 +104,7 @@ const Home = () => {
                         
                     </Container>
                     <div style={{borderBottom: `2px solid ${theme.palette.primary.textContrast}`, width: '300px', position: 'relative', left: '1380px', 
-                                top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.3s ease-in-out' : '' }}></div>
+                                top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.7s ease-in-out' : '' }}></div>
                 </Container>
             </Fade>
         </Grid>
