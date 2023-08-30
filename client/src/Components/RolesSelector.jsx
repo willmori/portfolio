@@ -10,7 +10,7 @@ const RolesSelector = ({ role, changeRole }) => {
     changeRole(item);
   };
 
-  const items = ['Metalinguist', 'CookBook Social', 'UCSB GOLD'];
+  const items = ['Metalinguist', 'CookBook Social', 'UC Santa Barbara'];
 
     return (
         <Paper elevation={3} style={{backgroundColor: 'transparent', boxShadow: 'none', minWidth: '170px'}}>

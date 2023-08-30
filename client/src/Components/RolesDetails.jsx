@@ -12,7 +12,7 @@ const RolesDetails = ({ role }) => {
   function getHeaderContent() {
     switch(role) {
         case "Metalinguist": return rolesDetailsContent.metalinguist.header;
-        case "UCSB GOLD": return rolesDetailsContent.UCSB_GOLD.header;
+        case "UC Santa Barbara": return rolesDetailsContent.UCSB.header;
         case "CookBook Social": return rolesDetailsContent.CookBook_Social.header;
         default: return rolesDetailsContent.metalinguist.header;
     }
@@ -21,7 +21,7 @@ const RolesDetails = ({ role }) => {
   function getDate() {
     switch(role) {
         case "Metalinguist": return rolesDetailsContent.metalinguist.date;
-        case "UCSB GOLD": return rolesDetailsContent.UCSB_GOLD.date;
+        case "UC Santa Barbara": return rolesDetailsContent.UCSB.date;
         case "CookBook Social": return rolesDetailsContent.CookBook_Social.date;
         default: return rolesDetailsContent.metalinguist.date;
     }
@@ -30,7 +30,7 @@ const RolesDetails = ({ role }) => {
   function getBodyText() {
     switch(role) {
         case "Metalinguist": return rolesDetailsContent.metalinguist.details;
-        case "UCSB GOLD": return rolesDetailsContent.UCSB_GOLD.details;
+        case "UC Santa Barbara": return rolesDetailsContent.UCSB.details;
         case "CookBook Social": return rolesDetailsContent.CookBook_Social.details;
         default: return rolesDetailsContent.metalinguist.details;
     }
@@ -47,8 +47,8 @@ const RolesDetails = ({ role }) => {
                     : role === "CookBook Social"
                         ? <a href={'https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial'} target='_blank' className='underline-on-hover' 
                             style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>CookBook Social</a>
-                        : <a href={'https://www.it.ucsb.edu/student-services/gold-blue'} target='_blank' className='underline-on-hover' 
-                            style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>UCSB GOLD</a>}
+                        : <a href={'https://www.cs.ucsb.edu/index.php/education/courses/course-descriptions/advanced-applications-programming'} target='_blank' className='underline-on-hover' 
+                            style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>UC Santa Barbara</a>}
             </Typography>
             <Typography style={{ marginTop: '2px', color: theme.palette.primary.textSecondary}}>{getDate()}</Typography>
             

@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useTheme } from '@mui/material';
 import RolesSelector from '../Components/RolesSelector';
 import RolesDetails from '../Components/RolesDetails';
+import './Experience.css';
 
 const Experience = () => {
 
@@ -32,7 +33,10 @@ const Experience = () => {
           <Container ref={ref} style={{paddingLeft: '0px', width: '700px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <RolesSelector role={role} changeRole={changeRole} />
           
+            <div className={`fade-in-out visible`}>
               <RolesDetails role={role} />
+            </div>
+           
             
             
           </Container>
