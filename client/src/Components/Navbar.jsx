@@ -39,7 +39,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Home" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
+                            <ListItemText primary="Home" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '200ms'}}>
@@ -51,7 +51,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="About" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
+                            <ListItemText primary="About" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '400ms'}}>
@@ -63,7 +63,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Experience" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
+                            <ListItemText primary="Experience" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
@@ -75,7 +75,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>04.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Projects" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
+                            <ListItemText primary="Projects" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>
@@ -87,7 +87,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>05.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Contact" style={{ textDecoration: 'none', color: theme.palette.primary.textSecondary }} />
+                            <ListItemText primary="Contact" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     

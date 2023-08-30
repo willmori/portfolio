@@ -24,7 +24,7 @@ function App(props) {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
         <Router>
-          <div style={{background: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main}}>
+          <div id="top" style={{background: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main}}>
             <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
             <Home />
             <AboutMe />

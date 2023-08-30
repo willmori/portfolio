@@ -32,13 +32,13 @@ const Home = () => {
                             Hi, my name is
                         </Typography>
                     </Container>
-                    <Typography variant="h1" style={{color: theme.palette.primary.textContrast}}>
+                    <Typography variant="h1" style={{color: theme.palette.primary.textPrimary}}>
                         William Mori.
                     </Typography>
-                    <Typography variant="h1" style={{color: theme.palette.primary.textSecondary}}>
+                    <Typography variant="h1" style={{color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
                         I build things for the web.
                     </Typography>
-                    <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.primary.textSecondary}}>
+                    <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
                         I'm a software engineer who specializes in full-stack development.<br></br>
                         I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
                         Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called&nbsp;<Link style={{color: theme.palette.primary.textPrimary}} to={'https://metalinguist.com'} target="_blank">Metalinguist</Link>.

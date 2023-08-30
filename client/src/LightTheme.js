@@ -5,7 +5,7 @@ const lightTheme = createTheme({
         type: 'light', // Set the palette type to 'dark'
         primary: {
             main: '#F5F5F5', // You can customize primary color for dark mode
-            textPrimary: 'rgb(85,145,140)',
+            textPrimary: 'rgb(29, 115, 108)',//'rgb(85,145,140)',
             textSecondary: 'rgb(140, 145, 175)',
             textContrast: '#000'
         },
@@ -16,8 +16,8 @@ const lightTheme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: 'transparent',
-                    border: '2px solid rgb(85,145,140)',
-                    color: 'rgb(85,145,140)'
+                    border: '2px solid rgb(29, 115, 108)',
+                    color: 'rgb(29, 115, 108)'
                 },
             },
         },

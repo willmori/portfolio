@@ -7,7 +7,7 @@ const darkTheme = createTheme({
             main: 'rgb(14, 25, 45)', // You can customize primary color for dark mode
             textPrimary: 'rgb(125, 220, 195)',
             textSecondary: 'rgb(140, 145, 175)',
-            textContrast: 'rgb(205, 215, 245'
+            textContrast: 'rgb(205, 215, 245)'
         },
         // Customize other colors for dark mode
     },
