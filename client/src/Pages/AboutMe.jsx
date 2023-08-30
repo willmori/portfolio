@@ -3,7 +3,7 @@ import { Button, Grid, Container, Avatar, Typography, Box } from '@mui/material'
 import { useTheme } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Casual from '../assets/Casual.JPG';
-import { aboutMeContent } from '../Content/AboutMe';
+import { aboutMeContent } from '../Content/AboutMeContent';
 import { useInView } from 'react-intersection-observer';
 import './AboutMe.css';
 

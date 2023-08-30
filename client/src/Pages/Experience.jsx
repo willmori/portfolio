@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Grid, Container, Typography } from '@mui/material';
+import { Button, Grid, Container, Typography, Fade } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from '@mui/material';
 import RolesSelector from '../Components/RolesSelector';
+import RolesDetails from '../Components/RolesDetails';
 
 const Experience = () => {
 
@@ -30,6 +31,10 @@ const Experience = () => {
           </Container>
           <Container ref={ref} style={{paddingLeft: '0px', width: '700px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <RolesSelector role={role} changeRole={changeRole} />
+          
+              <RolesDetails role={role} />
+            
+            
           </Container>
 
         </Grid>
