@@ -11,6 +11,7 @@ import lightTheme from './LightTheme';
 import darkTheme from './DarkTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
+import StarrySky from './StarryNight';
 
 function App(props) {
   
@@ -24,6 +25,7 @@ function App(props) {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
         <Router>
+          {isDarkMode ? <StarrySky /> : <StarrySky/>}
           <div id="top" style={{background: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main}}>
             <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
             <Home />

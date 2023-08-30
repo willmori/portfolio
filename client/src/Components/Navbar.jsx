@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 import Fade from '@mui/material/Fade';
 import { HashLink } from 'react-router-hash-link';
 
+
 const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
     const theme = useTheme();
@@ -27,7 +28,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
     }, [prevScrollPos]);
         
     return (
-        <AppBar position="sticky" style={{ background: theme.palette.primary.main, padding: '10px', boxShadow: window.pageYOffset == 0 ? 'none' : '', transition: 'transform 0.3s', transform: isNavVisible ? 'translateY(0)' : 'translateY(-100%)'}}>
+        <AppBar position="sticky" style={{ backgroundColor: theme.palette.type === 'dark' ? 'rgba(14, 25, 45, 0.9)' : ''/*theme.palette.primary.main*/, padding: '10px', boxShadow: window.pageYOffset == 0 ? 'none' : '', transition: 'transform 0.3s', transform: isNavVisible ? 'translateY(0)' : 'translateY(-100%)'}}>
             <Toolbar style={{  display: 'flex', justifyContent: 'end' }}>
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <Fade in timeout={1500} style={{transitionDelay: '0ms'}}>
