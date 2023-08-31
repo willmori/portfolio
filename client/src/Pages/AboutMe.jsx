@@ -5,6 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Casual from '../assets/Casual.JPG';
 import { aboutMeContent } from '../Content/AboutMeContent';
 import { useInView } from 'react-intersection-observer';
+import path1 from '../assets/path1.png';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -36,7 +37,7 @@ const AboutMe = () => {
                     <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                         {aboutMeContent.paragraph3}
                     </Typography>
-                    <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '34px'}}>
+                    <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '17px'}}>
                         {aboutMeContent.paragraph4}
                     </Typography>
                     <Grid container style={{width: '450px', position: 'relative', right: '32px'}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -63,6 +64,7 @@ const AboutMe = () => {
                     </Box>
                 </Container>
             </Container>
+            <img src={path1} style={{position: 'relative', left: '650px', top: '40px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
 

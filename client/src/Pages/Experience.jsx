@@ -15,7 +15,6 @@ const Experience = () => {
   });
 
   const [role, setRole] = useState('Metalinguist');
-  console.log(role)
 
   function changeRole(newRole) {
     setRole(newRole);
@@ -32,13 +31,9 @@ const Experience = () => {
           </Container>
           <Container ref={ref} style={{paddingLeft: '0px', width: '700px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <RolesSelector role={role} changeRole={changeRole} />
-          
             <div className={`fade-in-out visible`}>
               <RolesDetails role={role} />
             </div>
-           
-            
-            
           </Container>
 
         </Grid>
