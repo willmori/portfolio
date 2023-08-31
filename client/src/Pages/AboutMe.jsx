@@ -15,6 +15,8 @@ const AboutMe = () => {
         triggerOnce: true, // Trigger only once
         threshold: 0.1, // Percentage of component visibility to trigger
       });
+
+    const technologies = ["JavaScript (ES6+)", "React.js", "Node.js", "Material-UI", "Express.js", "Firebase"]
  
     return (
         <Grid style={{height: '90vh', paddingTop: '100px'}} id="aboutme">
@@ -38,22 +40,12 @@ const AboutMe = () => {
                         {aboutMeContent.paragraph4}
                     </Typography>
                     <Grid container style={{width: '450px', position: 'relative', right: '32px'}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
+                        {technologies.map((technology) => (
+                            <Grid xs={6} style={{display: 'flex', alignItems: 'center', padding: '5px'}}>
+                                <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
+                                <Typography style={{marginLeft: '6px', color: theme.palette.primary.textSecondary}}>{technology}</Typography>
+                            </Grid>
+                        ))}
                     </Grid>
                 </Container>
                 <Container style={{width: '500px'}}>

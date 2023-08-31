@@ -22,7 +22,7 @@ const Experience = () => {
   };
 
     return (
-        <Grid style={{height: '90vh', paddingTop: '100px'}} id="experience">
+        <Grid style={{height: '100vh', paddingLeft: '200px', paddingTop: '200px'}} id="experience">
           <Container ref={ref} style={{width: '700px', paddingLeft: '0px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '0px'}}>
               <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
