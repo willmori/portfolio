@@ -36,7 +36,7 @@ const Experience = () => {
               <RolesDetails role={role} />
             </div>
           </Container>
-          <img src={path2} style={{position: 'absolute', left: '650px', top: '2420px', pointerEvents: 'none'}} alt="" />
+          <img src={path2} style={{position: 'absolute', left: '600px', top: '2420px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
     );

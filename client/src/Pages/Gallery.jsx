@@ -15,11 +15,11 @@ const Gallery = () => {
  
     return (
         <Grid style={{height: '90vh', paddingTop: '150px'}} id="gallery">
-            <Container ref={ref} style={{width: '1000px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
+            <Container ref={ref} style={{width: '1300px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                 <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
                         <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                        <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Things I've Built</Typography>
+                        <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>
                         <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                     </Container>
                    
