@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useTheme } from '@mui/material';
 import RolesSelector from '../Components/RolesSelector';
 import RolesDetails from '../Components/RolesDetails';
+import path2 from '../assets/path2.png';
 import './Experience.css';
 
 const Experience = () => {
@@ -35,7 +36,7 @@ const Experience = () => {
               <RolesDetails role={role} />
             </div>
           </Container>
-
+          <img src={path2} style={{position: 'absolute', left: '650px', top: '2420px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
     );

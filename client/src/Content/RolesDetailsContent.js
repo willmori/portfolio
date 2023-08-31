@@ -16,7 +16,8 @@ export const rolesDetailsContent = {
         "details": ["Create and design new page data tables with implemented filtering options using React",
                     "Redesign certain parts of the admin portal with the goal of improving user experience",
                     "Create mockup designs in Figma",
-                    "Emphasized 90%+ code coverage in testing using Jest"]
+                    "Emphasized 90%+ code coverage in testing using Jest",
+                    "Conduct peer code reviews and participate in team scrum meetings"]
     },
     "CookBook_Social": {
         "header": "Full-Stack Developer",
