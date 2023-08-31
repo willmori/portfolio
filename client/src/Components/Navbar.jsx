@@ -68,7 +68,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
-                        <ListItem component={HashLink} to="#projects" smooth button sx={{
+                        <ListItem component={HashLink} to="#gallery" smooth button sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -76,7 +76,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>04.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Projects" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                            <ListItemText primary="Gallery" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>

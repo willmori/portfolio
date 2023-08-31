@@ -29,7 +29,15 @@ const darkTheme = createTheme({
                 },
             },
         },
-       
+        MuiListItem: {
+            styleOverrides: {
+              root: {
+                '&:hover': {
+                  backgroundColor: 'transparent', // Remove the background color change on hover
+                },
+              },
+            },
+          },
     },
 });
 

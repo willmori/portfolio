@@ -3,20 +3,30 @@ import { Button, Grid, Container, Avatar, Typography, Box } from '@mui/material'
 import { useTheme } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Casual from '../assets/Casual.JPG';
-import { aboutMeContent } from '../Content/AboutMe';
+import { aboutMeContent } from '../Content/AboutMeContent';
+import { useInView } from 'react-intersection-observer';
+import path1 from '../assets/path1.png';
+import './AboutMe.css';
 
 const AboutMe = () => {
 
     const theme = useTheme();
+
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Trigger only once
+        threshold: 0.1, // Percentage of component visibility to trigger
+      });
+
+    const technologies = ["JavaScript (ES6+)", "React.js", "Node.js", "Material-UI", "Express.js", "Firebase"]
  
     return (
         <Grid style={{height: '90vh', paddingTop: '100px'}} id="aboutme">
-            <Container style={{width: '1000px', display: 'flex'}}>
+            <Container ref={ref} style={{width: '1000px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                 <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
                         <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
                         <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>About Me</Typography>
-                        <div style={{borderBottom: `1px solid ${theme.palette.primary.textSecondary}`, width: '260px', marginLeft: '30px'}}></div>
+                        <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                     </Container>
                     <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                         {aboutMeContent.paragraph1}
@@ -27,26 +37,16 @@ const AboutMe = () => {
                     <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                         {aboutMeContent.paragraph3}
                     </Typography>
-                    <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '34px'}}>
+                    <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '17px'}}>
                         {aboutMeContent.paragraph4}
                     </Typography>
                     <Grid container style={{width: '450px', position: 'relative', right: '32px'}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
-                        <Grid xs={6} style={{display: 'flex', alignItems: 'center'}}>
-                            <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                            <Typography style={{color: theme.palette.primary.textSecondary}}>1</Typography>
-                        </Grid>
+                        {technologies.map((technology) => (
+                            <Grid xs={6} style={{display: 'flex', alignItems: 'center', padding: '5px'}}>
+                                <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
+                                <Typography style={{marginLeft: '6px', color: theme.palette.primary.textSecondary}}>{technology}</Typography>
+                            </Grid>
+                        ))}
                     </Grid>
                 </Container>
                 <Container style={{width: '500px'}}>
@@ -64,6 +64,7 @@ const AboutMe = () => {
                     </Box>
                 </Container>
             </Container>
+            <img src={path1} style={{position: 'relative', left: '650px', top: '40px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
 
