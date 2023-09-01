@@ -15,8 +15,8 @@ const Contribution = ({ name, placement }) => {
     const theme = useTheme();
 
     const [ref, inView] = useInView({
-        triggerOnce: true, // Trigger only once
-        threshold: 0.1, // Percentage of component visibility to trigger
+        triggerOnce: false, // Trigger only once
+        threshold: 0.2, // Percentage of component visibility to trigger
       });
 
     function getVideoSource() {

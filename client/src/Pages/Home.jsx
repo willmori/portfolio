@@ -8,6 +8,9 @@ import Fade from '@mui/material/Fade';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { HashLink } from 'react-router-hash-link';
+import { useInView } from 'react-intersection-observer';
 import './Home.css'
 
 
@@ -15,6 +18,29 @@ const Home = () => {
     const theme = useTheme();
 
     const [isLoaded, setIsLoaded] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const [ refArrow, inViewArrow ] = useInView({
+        triggerOnce: false, // Trigger only once
+        threshold: 0.5, // Element is considered in view when 50% is visible
+      });
+
+    useEffect(() => {
+        if (inViewArrow) {
+          setIsVisible(true); // Element is in view
+        } else {
+          setIsVisible(false); // Element is out of view
+        }
+    }, [inViewArrow]);
+
+    const arrowStyle = {
+        opacity: isVisible ? 1 : 0, // Fade in when isVisible is true, otherwise fade out
+        transition: 'opacity 0.5s', // Add a smooth transition effect
+        display: 'flex',
+        justifyContent: 'center', 
+        alignItems: 'center',
+        height: '270px'
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -109,6 +135,20 @@ const Home = () => {
                                 top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.7s ease-in-out' : '' }}></div>
                 </Container>
             </Fade>
+            
+            <div ref={refArrow} style={arrowStyle}>
+                <Fade in timeout={5000} style={{transitionDelay: '1300ms'}}>
+                    <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
+                                                                                '&:hover': {
+                                                                                    backgroundColor: 'rgb(125, 220, 195, 0.5)',
+                                                                                },
+                     }}>
+                        <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
+                    </IconButton>
+                </Fade>
+            </div>
+            
+            
         </Grid>
         
     );

@@ -11,8 +11,8 @@ const Experience = () => {
 
   const theme = useTheme();
   const [ref, inView] = useInView({
-    triggerOnce: true, // Trigger only once
-    threshold: 0.1, // Percentage of component visibility to trigger
+    triggerOnce: false, // Trigger only once
+    threshold: 0.3, // Percentage of component visibility to trigger
   });
 
   const [role, setRole] = useState('Metalinguist');

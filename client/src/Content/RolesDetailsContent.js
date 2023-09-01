@@ -7,7 +7,7 @@ export const rolesDetailsContent = {
         "details": ["Update and maintain backend Express.js API services using non-relational databases such as DynamoDB",
                     "Implement custom reusable React components utilizing ES6 JavaScript and Material-UI",
                     "Build and update with AWS including S3 and route53",
-                    "Setup E2E testing with frameworks such as Playwright",
+                    "Setup and write test suites for E2E testing with frameworks such as Playwright",
                     "Perform sprint demo's and participate in scrum meetings"]
     },
     "UCSB": {
