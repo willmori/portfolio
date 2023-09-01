@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List } from '@mui/material';
+import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List, ListItemText } from '@mui/material';
 import { useTheme } from '@mui/material';
 import ContributionText from '../Content/ContributionText';
 
@@ -49,15 +49,18 @@ const ContributionContent = ({ name, placement }) => {
 
  
     return (
-        <Container style={{display: 'flex', flexDirection: 'column', alignItems: placement === 'odd' ? 'flex-end' : ''}}>
-            <Typography>{getHeader()}</Typography>
-            <Typography>{getSubHeader()}</Typography>
-            <Paper>
-                <Typography>{getDetails()}</Typography>
+        <Container style={{display: 'flex', flexDirection: 'column', minWidth: '545px', alignItems: placement === 'odd' ? 'flex-end' : ''}}>
+            <Typography style={{color: theme.palette.primary.textPrimary, paddingBottom: '0px'}}>{getHeader()}</Typography>
+            <Typography style={{color: theme.palette.primary.textContrast, fontSize: '22px', fontWeight: 'bold', marginBottom: '15px'}}>{getSubHeader()}</Typography>
+            <Paper style={{padding: '20px', backgroundColor: 'rgba(20, 35, 60, 0.9)', borderRadius: '10px'}}>
+                <Typography align={placement === 'odd' ? 'right' : ''} style={{color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
             </Paper>
-            <List style={{display: 'flex'}}>
-                {getTechStack().map((tech) => (<ListItem>{tech}</ListItem>))}
-            </List>
+            <Container style={{display: 'flex', justifyContent: placement === 'odd' ? 'end' : '', marginTop: '10px', position: 'relative', left: placement === 'odd' ? '30px' : '', right: placement === 'even' ? '32px' : '' }}>
+                {getTechStack().map((tech) => (
+                        <Typography variant="body1" style={{ fontSize: '14px', padding: '10px', color: theme.palette.primary.textSecondary}}>
+                            {tech}
+                        </Typography>))}
+            </Container>
         </Container>
         
 

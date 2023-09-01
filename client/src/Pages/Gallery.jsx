@@ -24,7 +24,7 @@ const Gallery = () => {
                         <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                     </Container>
                     <Container style={{ display: 'flex', flexDirection: 'column'}}>
-                        <Contribution name="Companies" placement='odd' />
+                        <Contribution name="Companies" placement='odd'/>
                         <Contribution name="Playwright" placement='even' />
                         <Contribution name="CookBook_Social" placement='odd' />
                         <Contribution name="Tide_Together" placement='even' />
