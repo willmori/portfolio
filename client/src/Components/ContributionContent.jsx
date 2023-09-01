@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List, ListItemText, Link } from '@mui/material';
+import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List, ListItemText, Link, IconButton } from '@mui/material';
 import { useTheme } from '@mui/material';
 import ContributionText from '../Content/ContributionText';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import './ContributionContent.css'
 
 const ContributionContent = ({ name, placement }) => {
@@ -72,6 +73,17 @@ const ContributionContent = ({ name, placement }) => {
                             {tech}
                         </Typography>))}
             </Container>
+            {name === "CookBook_Social" ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
+                                                    "&:hover": {
+                                                    backgroundColor: "transparent",
+                                                    }
+                                                }}><GitHubIcon sx={{
+                                                    height: '30px',
+                                                    width: '30px', 
+                                                    color: theme.palette.primary.contrastText,
+                                                    transition: 'transform 0.4s',
+                                                    "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
+                                                }}/></IconButton> : ''}
         </Container>
         
 
