@@ -37,7 +37,7 @@ const Contribution = ({ name, placement }) => {
                 ?
                     <div style={{display: 'flex'}}>
                         <div className="tinted-video-wrapper">
-                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px'}}>
+                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
                                 <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
                             </div>
                             
@@ -52,8 +52,8 @@ const Contribution = ({ name, placement }) => {
                             <ContributionContent name={name} placement={placement} />
                         </Container>
                         <div className="tinted-video-wrapper" style={{position: 'relative', right: '97px'}}>
-                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px'}}>
-                                {name === "TideTogether" 
+                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                                {name === "Tide_Together" 
                                     ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
                                     :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
                                 }
