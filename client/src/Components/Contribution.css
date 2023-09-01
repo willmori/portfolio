@@ -1,0 +1,15 @@
+.tinted-video-wrapper {
+    position: relative;
+  }
+  
+  .tinted-video-wrapper::before {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    top: 29px;
+    left: 0;
+    width: 600px;
+    height: 342px;
+    background-color: rgba(125, 220, 195, 0.5); /* Change the color and opacity as needed */
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+  }

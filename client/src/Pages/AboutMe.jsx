@@ -64,7 +64,7 @@ const AboutMe = () => {
                     </Box>
                 </Container>
             </Container>
-            <img src={path1} style={{position: 'relative', left: '650px', top: '40px', pointerEvents: 'none'}} alt="" />
+            <img src={path1} style={{position: 'relative', left: '600px', top: '40px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
 
