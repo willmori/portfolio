@@ -15,7 +15,7 @@ const Gallery = () => {
       });
  
     return (
-        <Grid style={{height: '250vh', paddingTop: '150px'}} id="gallery">
+        <Grid style={{height: '230vh', paddingTop: '150px'}} id="gallery">
             <Container style={{width: '1300px', display: 'flex'}} >
                 <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
