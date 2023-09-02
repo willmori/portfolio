@@ -17,7 +17,7 @@ const AboutMe = () => {
         threshold: 0.3, // Percentage of component visibility to trigger
       });
 
-    const technologies = ["JavaScript (ES6+)", "React.js", "Node.js", "Material-UI", "Express.js", "Firebase"]
+    const technologies = ["DS & Algorithms I, II", "Database Systems", "Machine Learning & AI", "Operating Systems", "Obj Oriented Design", "Adv App Programming"]
  
     return (
         <Grid style={{height: '90vh', paddingTop: '100px'}} id="aboutme">
