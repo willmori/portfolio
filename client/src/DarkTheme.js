@@ -37,7 +37,16 @@ const darkTheme = createTheme({
                 },
               },
             },
-          },
+        },
+    },
+    breakpoints: {
+        values: {
+          xs: 440,       // Extra small devices (phones)
+          sm: 1000,     // Small devices (tablets)
+          md: 1330,     // Medium devices (desktops)
+          lg: 1280,    // Large devices (large desktops)
+          xl: 1920,    // Extra large devices
+        },
     },
 });
 

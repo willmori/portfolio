@@ -7,12 +7,16 @@ import Playwright from '../assets/Playwright.mp4';
 import CookBookSocial from '../assets/CookBookSocial.mp4';
 import TideTogether from '../assets/TideTogether.png';
 import ContributionContent from './ContributionContent';
+import { useMediaQuery } from '@mui/material';
 import './Contribution.css'
 
 
 const Contribution = ({ name, placement }) => {
 
     const theme = useTheme();
+
+    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -29,43 +33,68 @@ const Contribution = ({ name, placement }) => {
     }
  
     return (
-    
-        <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`}
-                    style={{width: '1045px', position: 'relative', right: '7px', padding: '0px', paddingBottom: '120px',
-                            display: 'flex'}} >
-            {placement === 'odd' 
-                ?
-                    <div style={{display: 'flex'}}>
-                        <div className="tinted-video-wrapper">
-                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
-                                <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
+        <React.Fragment>
+            {!isCutOffScreen ? 
+            <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`}
+                        style={{maxWidth: '1045px', position: 'relative', right: '7px', padding: '0px', paddingBottom: '120px',
+                                display: 'flex'}} >
+                {placement === 'odd' 
+                    ?
+                        <div style={{display: 'flex'}}>
+                            <div className="tinted-video-wrapper">
+                                <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                                    <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
+                                </div>
+                                
                             </div>
-                            
+                            <Container style={{marginTop: '55px', position: 'relative', right: '100px', zIndex: 3}}>
+                                <ContributionContent name={name} placement={placement} />
+                            </Container>
                         </div>
-                        <Container style={{marginTop: '55px', position: 'relative', right: '100px', zIndex: 3}}>
-                            <ContributionContent name={name} placement={placement} />
-                        </Container>
-                    </div>
+                    :
+                        <div style={{display: 'flex', position: 'relative', right: '53px'}}>
+                            <Container style={{marginTop: '70px', zIndex: 3}}>
+                                <ContributionContent name={name} placement={placement} />
+                            </Container>
+                            <div className="tinted-video-wrapper" style={{position: 'relative', right: '97px'}}>
+                                <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                                    {name === "Tide_Together" 
+                                        ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
+                                        :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                }
+                    
+            </Container>
+            : !isTabletScreen ?
+                <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`}
+                            style={{maxWidth: '1045px', position: 'relative', right: '7px', padding: '0px', paddingBottom: '25px',
+                                    display: 'flex'}} >
+                            <div style={{display: 'flex', flexDirection: 'column'}}>
+                                <div className="tinted-video-wrapper">
+                                    <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                                    {name === "Tide_Together" 
+                                        ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
+                                        :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
+                                    }
+                                    </div>
+                                    
+                                </div>
+                                <Container style={{marginTop: '55px', position: 'relative', right: '100px', zIndex: 3}}>
+                                    <ContributionContent name={name} placement={placement} />
+                                </Container>
+                            </div>
+                </Container>
                 :
-                    <div style={{display: 'flex', position: 'relative', right: '53px'}}>
-                        <Container style={{marginTop: '70px', zIndex: 3}}>
-                            <ContributionContent name={name} placement={placement} />
-                        </Container>
-                        <div className="tinted-video-wrapper" style={{position: 'relative', right: '97px'}}>
-                            <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
-                                {name === "Tide_Together" 
-                                    ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
-                                    :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
-                                }
-                            </div>
-                        </div>
-                    </div>
+                <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`}
+                            style={{maxWidth: '1045px', position: 'relative', right: '7px', padding: '0px', paddingBottom: '25px',
+                                    display: 'flex'}} >
+                                    TEST
+                </Container>
             }
-                
-        </Container>
-            
-      
-        
+        </React.Fragment>
 
     );
 }
