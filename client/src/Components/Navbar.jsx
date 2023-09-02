@@ -32,7 +32,19 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             <Toolbar style={{  display: 'flex', justifyContent: 'end' }}>
                 <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>
                     <Fade in timeout={1500} style={{transitionDelay: '0ms'}}>
-                        <ListItem component={HashLink} to="#top" smooth button sx={{
+                        <ListItem component={HashLink} to="#top" smooth button disableRipple sx={{
+                                                    borderBottom: `1px solid transparent`,
+                                                    "&:hover": {
+                                                    backgroundColor: "transparent",
+                                                    borderBottom: `1px solid ${theme.palette.primary.textPrimary}`
+                                                    }
+                                                }}>
+                            <Typography style={{color: theme.palette.primary.textPrimary}}>00.&nbsp;&nbsp;</Typography>
+                            <ListItemText primary="Home" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                        </ListItem>
+                    </Fade>
+                    <Fade in timeout={1500} style={{transitionDelay: '200ms'}}>
+                        <ListItem component={HashLink} to="#aboutme" smooth button disableRipple sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -40,11 +52,11 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Home" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                            <ListItemText primary="About" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
-                    <Fade in timeout={1500} style={{transitionDelay: '200ms'}}>
-                        <ListItem component={HashLink} to="#aboutme" smooth button sx={{
+                    <Fade in timeout={1500} style={{transitionDelay: '400ms'}}>
+                        <ListItem component={HashLink} to="#experience" smooth button disableRipple sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -52,11 +64,11 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="About" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                            <ListItemText primary="Experience" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
-                    <Fade in timeout={1500} style={{transitionDelay: '400ms'}}>
-                        <ListItem component={HashLink} to="#experience" smooth button sx={{
+                    <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
+                        <ListItem component={HashLink} to="#gallery" smooth button disableRipple sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -64,11 +76,11 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Experience" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                            <ListItemText primary="Gallery" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
-                    <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
-                        <ListItem component={HashLink} to="#gallery" smooth button sx={{
+                    <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>
+                        <ListItem component={HashLink} to="#contact" smooth button disableRipple sx={{
                                                     borderBottom: `1px solid transparent`,
                                                     "&:hover": {
                                                     backgroundColor: "transparent",
@@ -76,25 +88,11 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                     }
                                                 }}>
                             <Typography style={{color: theme.palette.primary.textPrimary}}>04.&nbsp;&nbsp;</Typography>
-                            <ListItemText primary="Gallery" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
-                        </ListItem>
-                    </Fade>
-                    <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>
-                        <ListItem component={HashLink} to="#contact" smooth button sx={{
-                                                    borderBottom: `1px solid transparent`,
-                                                    "&:hover": {
-                                                    backgroundColor: "transparent",
-                                                    borderBottom: `1px solid ${theme.palette.primary.textPrimary}`
-                                                    }
-                                                }}>
-                            <Typography style={{color: theme.palette.primary.textPrimary}}>05.&nbsp;&nbsp;</Typography>
                             <ListItemText primary="Contact" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                         </ListItem>
                     </Fade>
                     
                 </List>
-               
-                <ThemeToggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}></ThemeToggle>
                 
             </Toolbar>
         </AppBar>
