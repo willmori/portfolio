@@ -13,8 +13,8 @@ const AboutMe = () => {
     const theme = useTheme();
 
     const [ref, inView] = useInView({
-        triggerOnce: true, // Trigger only once
-        threshold: 0.1, // Percentage of component visibility to trigger
+        triggerOnce: false, // Trigger only once
+        threshold: 0.3, // Percentage of component visibility to trigger
       });
 
     const technologies = ["JavaScript (ES6+)", "React.js", "Node.js", "Material-UI", "Express.js", "Firebase"]
@@ -64,7 +64,7 @@ const AboutMe = () => {
                     </Box>
                 </Container>
             </Container>
-            <img src={path1} style={{position: 'relative', left: '650px', top: '40px', pointerEvents: 'none'}} alt="" />
+            <img src={path1} style={{position: 'relative', left: '600px', top: '40px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
 

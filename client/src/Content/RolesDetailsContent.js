@@ -4,16 +4,16 @@ export const rolesDetailsContent = {
     "metalinguist": {
         "header": "Software Engineer Intern",
         "date": "July 2023 - Present",
-        "details": ["Update and maintain backend Express.js API services using non-relational databases such as DynamoDB",
+        "details": ["Opportunity to work alongside top engineers with decades of experience at fortune 500 companies",
+                    "Build and update with AWS including S3, route53, and DynamoDB",
                     "Implement custom reusable React components utilizing ES6 JavaScript and Material-UI",
-                    "Build and update with AWS including S3 and route53",
-                    "Setup E2E testing with frameworks such as Playwright",
+                    "E2E testing with frameworks such as Playwright",
                     "Perform sprint demo's and participate in scrum meetings"]
     },
     "UCSB": {
         "header": "Frontend Developer",
         "date": "Dec 2020 - Mar 2021",
-        "details": ["Create and design new page data tables with implemented filtering options using React",
+        "details": ["Create and design new page data tables and implement filtering options using React",
                     "Redesign certain parts of the admin portal with the goal of improving user experience",
                     "Create mockup designs in Figma",
                     "Emphasized 90%+ code coverage in testing using Jest",

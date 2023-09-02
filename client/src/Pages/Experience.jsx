@@ -11,8 +11,8 @@ const Experience = () => {
 
   const theme = useTheme();
   const [ref, inView] = useInView({
-    triggerOnce: true, // Trigger only once
-    threshold: 0.1, // Percentage of component visibility to trigger
+    triggerOnce: false, // Trigger only once
+    threshold: 0.3, // Percentage of component visibility to trigger
   });
 
   const [role, setRole] = useState('Metalinguist');
@@ -36,7 +36,7 @@ const Experience = () => {
               <RolesDetails role={role} />
             </div>
           </Container>
-          <img src={path2} style={{position: 'absolute', left: '650px', top: '2420px', pointerEvents: 'none'}} alt="" />
+          <img src={path2} style={{position: 'absolute', left: '600px', top: '2420px', pointerEvents: 'none'}} alt="" />
         </Grid>
         
     );
