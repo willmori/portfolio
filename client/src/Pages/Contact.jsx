@@ -18,7 +18,7 @@ const Contact = () => {
 
   const [ refArrow, inViewArrow ] = useInView({
     triggerOnce: false, // Trigger only once
-    threshold: 0.5, // Element is considered in view when 50% is visible
+    threshold: 0.9, 
   });
 
   useEffect(() => {
