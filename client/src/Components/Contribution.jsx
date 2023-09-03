@@ -89,7 +89,7 @@ const Contribution = ({ name, placement }) => {
                 </Container>
                 :
                 <>
-                        <div className="tinted-video-wrapper" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                        <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
                             {name === "Tide_Together" 
                                         ?   <img src={getVideoSource()} style={{ filter: 'blur(3px)', width: '100%', height: 'auto', position: 'relative'}} />
                                         :   <video autoPlay loop muted style={{ filter: 'blur(3px)', width: '100%', height: 'auto', position: 'relative'}} src={getVideoSource()}></video>
