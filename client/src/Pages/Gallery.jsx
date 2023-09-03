@@ -23,7 +23,7 @@ const Gallery = () => {
     return (
         <React.Fragment>
             {!isCutOffScreen ?
-            <Grid style={{height: '230vh', paddingTop: '50px'}} id="gallery">
+            <Grid style={{ marginTop: '200px'}} id="gallery">
                 <Container style={{width: '1300px', display: 'flex'}} >
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
@@ -40,7 +40,7 @@ const Gallery = () => {
                     </Container>
                 </Container>
             </Grid> :
-            <Grid style={{height: isTabletScreen ? isSmallTablet ? '245vh' : '270vh' : '310vh', paddingTop: isTabletScreen ? '200px' : '30px'}} id="gallery">
+            <Grid style={{ marginTop: '200px' }} id="gallery">
                 <Container style={{maxWidth: '1300px', display: 'flex'}} >
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>

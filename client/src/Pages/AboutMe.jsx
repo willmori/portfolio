@@ -25,7 +25,7 @@ const AboutMe = () => {
     return (
         <React.Fragment>
             {!isTabletScreen ?
-            <Grid style={{height: '90vh', paddingTop: '100px'}} id="aboutme">
+            <Grid style={{ marginTop: '200px'}} id="aboutme">
                 <Container ref={ref} style={{width: '1000px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
@@ -71,7 +71,7 @@ const AboutMe = () => {
                 </Container>
             </Grid>
             : 
-            <Grid style={{height: '130vh', paddingTop: '100px'}} id="aboutme">
+            <Grid style={{ marginTop: '200px'}} id="aboutme">
                 <Container ref={ref} style={{maxWidth: '1000px', display: 'flex', flexDirection: 'column'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', justifyContent: 'center', position: 'relative', right: '30px'}}>
