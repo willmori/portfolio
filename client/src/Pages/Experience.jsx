@@ -21,6 +21,7 @@ const Experience = () => {
   const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
   const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
   const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
   function changeRole(newRole) {
     setRole(newRole);
@@ -29,11 +30,11 @@ const Experience = () => {
     return (
       <React.Fragment>
         
-        <Grid style={{paddingLeft: isTabletScreen ? '0px' : '200px', paddingTop: isTabletScreen ? '80px' : '200px'}} id="experience">
+        <Grid style={{paddingLeft: isTabletScreen ? '10px' : '200px', paddingTop: isTabletScreen ? '80px' : '200px'}} id="experience">
           <Container ref={ref} style={{maxWidth: '700px', paddingLeft: '0px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '0px'}}>
               <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
-              <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Roles I've Worked</Typography>
+              <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Roles {isMobileScreen ? '' : "I've Worked"}</Typography>
               <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
             </Container>
           </Container>

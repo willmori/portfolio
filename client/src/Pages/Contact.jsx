@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { HashLink } from 'react-router-hash-link';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@mui/material';
 
 const Contact = () => {
  
@@ -36,7 +37,10 @@ const Contact = () => {
     justifyContent: 'center', 
     alignItems: 'center',
     paddingBottom: '220px'
-};
+  };
+
+  const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+  const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
      <>
@@ -51,8 +55,8 @@ const Contact = () => {
                 </IconButton>
         </div>
         <Typography style={{color: theme.palette.primary.textPrimary}}>What's Next?</Typography>
-        <Typography variant="h3" style={{color: theme.palette.primary.textContrast, fontWeight: 'bold', paddingTop: '20px', paddingBottom: '20px'}}>Get In Touch</Typography>
-        <Typography style={{color: theme.palette.primary.textSecondary, maxWidth: '705px'}}>
+        <Typography variant="h3" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.primary.textContrast, fontWeight: 'bold', paddingTop: '20px', paddingBottom: '20px'}}>Get In Touch</Typography>
+        <Typography style={{color: theme.palette.primary.textSecondary, maxWidth: '705px', fontSize: isSmallTablet ? '12px' : '', paddingLeft: isSmallTablet ? '30px' : '', paddingRight: isSmallTablet ? '30px' : ''}}>
             While I am primarily looking for a full-stack, frontend, or backend software developer position, I am also open to freelance work! 
             I embrace the opportunity to learn from any problem solving challenges I encounter along my software engineering journey and love working in a collaborative agile environment.
             For any inquiries or if you'd like to just say hi, please feel free to reach out!

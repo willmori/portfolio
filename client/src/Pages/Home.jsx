@@ -57,24 +57,24 @@ const Home = () => {
     return (
         <React.Fragment>
             <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: '150px', marginRight: '150px', marginTop: '20px'}}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: isMobileScreen ? '20px' : '7%', marginRight: isMobileScreen ? '15px' : '7%', marginTop: isMobileScreen ? '' : '20px', paddingTop: isMobileScreen ? '70px': ''}}>
                     <div style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
                         <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
-                        <Typography variant="h6" style={{ color: theme.palette.primary.textPrimary}}>
+                        <Typography variant="h6" style={{ fontSize: isMobileScreen ? '12px' : '', color: theme.palette.primary.textPrimary}}>
                             Hi, my name is
                         </Typography>
                     </div>
-                    <Typography variant="h1" style={{color: theme.palette.primary.textPrimary}}>
+                    <Typography variant="h1" style={{fontSize: isMobileScreen ? '45px': '', color: theme.palette.primary.textPrimary}}>
                         William Mori.
                     </Typography>
-                    <Typography variant="h1" style={{color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
+                    <Typography variant="h1" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
                         I build things for the web.
                     </Typography>
-                    <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
+                    <Typography variant="h6" style={{fontSize: isMobileScreen ? '12px' : '', marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
                                 I'm a software engineer who specializes in full-stack development.<br></br>
                                 I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
                                 Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called
-                                <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: '18px', position: 'relative', top: '3px', 
+                                <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: isMobileScreen ? '12px' : '18px', position: 'relative', top: '3px', 
                                                 paddingRight: '0px', paddingTop: '0px'}} href='https://metalinguist.com/'>Metalinguist</IconButton>.
                     </Typography>
                     <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px', maxWidth: '100px'}} href={Resume} target="_blank">

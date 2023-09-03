@@ -13,6 +13,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
     const theme = useTheme();
     
     const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
     const [isNavVisible, setIsNavVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -32,7 +33,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
         
     return (
         <React.Fragment>
-            {!isCutOffScreen || isCutOffScreen ?
+            {!isMobileScreen ?
             <AppBar position="sticky" style={{ backgroundColor: theme.palette.type === 'dark' ? 'rgba(14, 25, 45, 0.9)' : '', padding: '10px', boxShadow: window.pageYOffset == 0 ? 'none' : '', transition: 'transform 0.3s', transform: isNavVisible ? 'translateY(0)' : 'translateY(-100%)'}}>
                 <Toolbar style={{  display: 'flex', justifyContent: 'end' }}>
                     <List component="nav" aria-labelledby="main navigation" style={{ display: 'flex', justifyContent: 'end' }}>

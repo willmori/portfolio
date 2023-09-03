@@ -13,6 +13,7 @@ const Gallery = () => {
     const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
     const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
     const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
 
     const [ref, inView] = useInView({
@@ -45,7 +46,8 @@ const Gallery = () => {
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                             <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                            <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>
+                            {isMobileScreen ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>
+                            : <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>}
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
