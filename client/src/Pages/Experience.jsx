@@ -18,8 +18,9 @@ const Experience = () => {
 
   const [role, setRole] = useState('Metalinguist');
 
-  const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
-  const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+  const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+  const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   function changeRole(newRole) {
     setRole(newRole);
@@ -37,28 +38,47 @@ const Experience = () => {
             </Container>
           </Container>
           <Container ref={ref} style={{paddingLeft: '0px', width: '700px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
-            <RolesSelector role={role} changeRole={changeRole} />
+            <RolesSelector vertical={true} role={role} changeRole={changeRole} />
             <div className={`fade-in-out visible`}>
               <RolesDetails role={role} />
             </div>
           </Container>
-          <img src={path2} style={{position: 'absolute', left: '600px', top: '2420px', pointerEvents: 'none'}} alt="" />
         </Grid>
         :
+        !isSmallTablet ?
         <Grid style={{height: '80vh', paddingLeft: '0px', paddingTop: '200px'}} id="experience">
-          <Container ref={ref} style={{width: '700px', paddingLeft: '0px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
-            <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '0px'}}>
-              <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
-              <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Roles I've Worked</Typography>
-              <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
+            <Container ref={ref} style={{maxWidth: '1000px', display: 'flex', flexDirection: 'column'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
+                    <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', justifyContent: 'center', position: 'relative', right: '30px'}}>
+                            <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
+                            <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Roles I've Worked</Typography>
+                            <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
+                        </Container>
+                        <RolesSelector vertical={false} role={role} changeRole={changeRole} />
+                        <div style={{maxWidth: '500px'}} className={`fade-in-out visible`}>
+                          <RolesDetails role={role} />
+                        </div>
+                    </Container>
+                    
             </Container>
-          </Container>
-          <Container ref={ref} style={{paddingLeft: '0px', width: '700px', display: 'flex'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
-            <RolesSelector role={role} changeRole={changeRole} />
-            <div className={`fade-in-out visible`}>
-              <RolesDetails role={role} />
-            </div>
-          </Container>
+          
+        </Grid> 
+        :
+        <Grid style={{height: '80vh', paddingLeft: '0px', paddingTop: '200px'}} id="experience">
+            <Container ref={ref} style={{maxWidth: '1000px', display: 'flex', flexDirection: 'column'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
+                    <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', justifyContent: 'center', position: 'relative', right: '30px'}}>
+                            <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
+                            <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Roles I've Worked</Typography>
+                            <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
+                        </Container>
+                        <RolesSelector vertical={false} role={role} changeRole={changeRole} />
+                        <div style={{maxWidth: '500px'}} className={`fade-in-out visible`}>
+                          <RolesDetails role={role} />
+                        </div>
+                    </Container>
+                    
+            </Container>
           
         </Grid> 
         }

@@ -19,7 +19,9 @@ const Home = () => {
     const theme = useTheme();
 
     const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
     const [isLoaded, setIsLoaded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -54,8 +56,8 @@ const Home = () => {
 
     return (
         <React.Fragment>
-            {!isMobileScreen ?
-            <Grid id="home" style={{ height: '90vh', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
+            {isTabletScreen ?
+            <Grid id="home" style={{ height: isTabletScreen ? isSmallTablet ? '130vh' : '115vh' : '90vh', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
                 <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
                     <Container style={{ paddingTop: '35px'}}>
                         <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>

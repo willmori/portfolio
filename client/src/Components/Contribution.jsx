@@ -15,8 +15,8 @@ const Contribution = ({ name, placement }) => {
 
     const theme = useTheme();
 
-    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -88,11 +88,19 @@ const Contribution = ({ name, placement }) => {
                             </div>
                 </Container>
                 :
-                <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`}
-                            style={{maxWidth: '1045px', position: 'relative', right: '7px', padding: '0px', paddingBottom: '25px',
-                                    display: 'flex'}} >
-                                    TEST
-                </Container>
+                <>
+                        <div className="tinted-video-wrapper" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
+                            {name === "Tide_Together" 
+                                        ?   <img src={getVideoSource()} style={{ filter: 'blur(3px)', width: '100%', height: 'auto', position: 'relative'}} />
+                                        :   <video autoPlay loop muted style={{ filter: 'blur(3px)', width: '100%', height: 'auto', position: 'relative'}} src={getVideoSource()}></video>
+                                    }
+                            <Container style={{ width: '100%', height: 'auto', position: 'absolute',  zIndex: 10}}>
+                                    <ContributionContent name={name} placement={placement} />
+                                </Container>
+                        </div>
+                            
+                            
+                </>
             }
         </React.Fragment>
 

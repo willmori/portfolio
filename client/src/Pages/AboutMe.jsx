@@ -12,8 +12,8 @@ import './AboutMe.css';
 const AboutMe = () => {
 
     const theme = useTheme();
-    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
-    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -69,13 +69,12 @@ const AboutMe = () => {
                         </Box>
                     </Container>
                 </Container>
-                <img src={path1} style={{position: 'relative', left: !isCutOffScreen ? '600px' : '400px', top: '40px', pointerEvents: 'none'}} alt="" />
             </Grid>
             : 
             <Grid style={{height: '130vh', paddingTop: '100px'}} id="aboutme">
                 <Container ref={ref} style={{maxWidth: '1000px', display: 'flex', flexDirection: 'column'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px'}}>
+                        <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', justifyContent: 'center', position: 'relative', right: '30px'}}>
                             <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>01.&nbsp;&nbsp;</Typography>
                             <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>About Me</Typography>
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>

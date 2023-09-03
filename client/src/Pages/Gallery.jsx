@@ -10,7 +10,10 @@ const Gallery = () => {
 
     const theme = useTheme();
 
-    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+    const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -20,7 +23,7 @@ const Gallery = () => {
     return (
         <React.Fragment>
             {!isCutOffScreen ?
-            <Grid style={{height: '230vh', paddingTop: '150px'}} id="gallery">
+            <Grid style={{height: '230vh', paddingTop: '50px'}} id="gallery">
                 <Container style={{width: '1300px', display: 'flex'}} >
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
@@ -37,23 +40,34 @@ const Gallery = () => {
                     </Container>
                 </Container>
             </Grid> :
-            <Grid style={{height: '320vh', paddingTop: '150px'}} id="gallery">
-            <Container style={{maxWidth: '1300px', display: 'flex'}} >
-                <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
-                        <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                        <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>
-                        <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
+            <Grid style={{height: isTabletScreen ? isSmallTablet ? '245vh' : '270vh' : '310vh', paddingTop: isTabletScreen ? '200px' : '30px'}} id="gallery">
+                <Container style={{maxWidth: '1300px', display: 'flex'}} >
+                    <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
+                            <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
+                            <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>
+                            <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
+                        </Container>
+                        <Container style={{ display: 'flex', flexDirection: 'column'}}>
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="Companies" placement='odd'/>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="Playwright" placement='even' />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="CookBook_Social" placement='odd' />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="Tide_Together" placement='even' />
+                            </div>
+                            
+                            
+                            
+                        </Container>     
                     </Container>
-                    <Container style={{ display: 'flex', flexDirection: 'column'}}>
-                        <Contribution name="Companies" placement='odd'/>
-                        <Contribution name="Playwright" placement='even' />
-                        <Contribution name="CookBook_Social" placement='odd' />
-                        <Contribution name="Tide_Together" placement='even' />
-                    </Container>     
                 </Container>
-            </Container>
-        </Grid>}
+            </Grid>}
         </React.Fragment>
        
     );

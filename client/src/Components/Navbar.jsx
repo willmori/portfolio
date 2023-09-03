@@ -12,7 +12,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
 
     const theme = useTheme();
     
-    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
+    const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
     const [isNavVisible, setIsNavVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);

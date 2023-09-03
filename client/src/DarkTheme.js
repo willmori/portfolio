@@ -41,10 +41,10 @@ const darkTheme = createTheme({
     },
     breakpoints: {
         values: {
-          xs: 440,       // Extra small devices (phones)
-          sm: 1000,     // Small devices (tablets)
-          md: 1330,     // Medium devices (desktops)
-          lg: 1280,    // Large devices (large desktops)
+          xs: 420,       // Extra small devices (phones)
+          sm: 700,     // 
+          md: 1000,     // tablet 
+          lg: 1330,    // screen cut off(large desktops)
           xl: 1920,    // Extra large devices
         },
     },
