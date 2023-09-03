@@ -17,7 +17,7 @@ const AboutMe = () => {
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
-        threshold: 0.3, // Percentage of component visibility to trigger
+        threshold: 0.1, // Percentage of component visibility to trigger
       });
 
     const technologies = ["DS & Algorithms I, II", "Database Systems", "Machine Learning & AI", "Operating Systems", "Obj Oriented Design", "Adv App Programming"]
