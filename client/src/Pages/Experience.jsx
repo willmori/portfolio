@@ -29,7 +29,7 @@ const Experience = () => {
     return (
       <React.Fragment>
         
-        <Grid style={{height: '100vh', paddingLeft: isTabletScreen ? '0px' : '200px', paddingTop: '200px'}} id="experience">
+        <Grid style={{paddingLeft: isTabletScreen ? '0px' : '200px', paddingTop: isTabletScreen ? '80px' : '200px'}} id="experience">
           <Container ref={ref} style={{maxWidth: '700px', paddingLeft: '0px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
             <Container style={{display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '0px'}}>
               <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>

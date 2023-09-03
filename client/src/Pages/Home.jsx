@@ -28,7 +28,7 @@ const Home = () => {
 
     const [ refArrow, inViewArrow ] = useInView({
         triggerOnce: false, // Trigger only once
-        threshold: 0.5, // Element is considered in view when 50% is visible
+        threshold: 0.8, // Element is considered in view when 50% is visible
       });
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const Home = () => {
         display: 'flex',
         justifyContent: 'center', 
         alignItems: 'center',
-        height: '270px'
+        paddingTop: '60px'
     };
 
     useEffect(() => {
@@ -56,34 +56,32 @@ const Home = () => {
 
     return (
         <React.Fragment>
-            {isTabletScreen ?
-            <Grid id="home" style={{ height: isTabletScreen ? isSmallTablet ? '130vh' : '115vh' : '90vh', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
-                <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
-                    <Container style={{ paddingTop: '35px'}}>
-                        <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
-                            <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
-                            <Typography variant="h6" style={{ color: theme.palette.primary.textPrimary}}>
-                                Hi, my name is
-                            </Typography>
-                        </Container>
-                        <Typography variant="h1" style={{color: theme.palette.primary.textPrimary}}>
-                            William Mori.
+            <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: '150px', marginRight: '150px', marginTop: '20px'}}>
+                    <div style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
+                        <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
+                        <Typography variant="h6" style={{ color: theme.palette.primary.textPrimary}}>
+                            Hi, my name is
                         </Typography>
-                        <Typography variant="h1" style={{color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
-                            I build things for the web.
-                        </Typography>
-                        <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
-                            I'm a software engineer who specializes in full-stack development.<br></br>
-                            I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
-                            Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called
-                            <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: '18px', position: 'relative', top: '3px', 
-                                            paddingRight: '0px', paddingTop: '0px'}} href='https://metalinguist.com/'>Metalinguist</IconButton>.
-                        </Typography>
-                        <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px'}} href={Resume} target="_blank">
-                            Resume
-                        </Button>
-                        <Container style={{display: 'flex', justifyContent: 'end', position: !isCutOffScreen ? 'absolute' : ''}}>
-                            <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
+                    </div>
+                    <Typography variant="h1" style={{color: theme.palette.primary.textPrimary}}>
+                        William Mori.
+                    </Typography>
+                    <Typography variant="h1" style={{color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
+                        I build things for the web.
+                    </Typography>
+                    <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
+                                I'm a software engineer who specializes in full-stack development.<br></br>
+                                I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
+                                Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called
+                                <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: '18px', position: 'relative', top: '3px', 
+                                                paddingRight: '0px', paddingTop: '0px'}} href='https://metalinguist.com/'>Metalinguist</IconButton>.
+                    </Typography>
+                    <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px', maxWidth: '100px'}} href={Resume} target="_blank">
+                                Resume
+                    </Button>
+                    <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                        <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
                                 <Box m={1}>
                                     <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
                                                         "&:hover": {
@@ -136,130 +134,22 @@ const Home = () => {
                                         </InstagramIcon>
                                     </IconButton>
                                 </Box>
-                            </Fade>
-                            
-                        </Container>
-                        
-                        <div style={{borderBottom: `2px solid ${theme.palette.primary.textContrast}`, width: '300px', position: 'relative', left: '1460px', 
-                                    top: '30px', transform: isLoaded ? 'translateX(-60%)' : '', transition: isLoaded ? 'transform 0.7s ease-in-out' : '' }}></div>
-                        
-                    </Container>
-                </Fade>
-                
-                <div ref={refArrow} style={arrowStyle}>
-                    <Fade in timeout={5000} style={{transitionDelay: '1300ms'}}>
-                        <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
-                                                                                    '&:hover': {
-                                                                                        backgroundColor: 'rgb(125, 220, 195, 0.5)',
-                                                                                    },
-                        }}>
-                            <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
-                        </IconButton>
-                    </Fade>
+                        </Fade>
+                    </div>
+                    <div ref={refArrow} style={arrowStyle}>
+                        <Fade in timeout={5000} style={{transitionDelay: '1300ms'}}>
+                            <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
+                                                                                        '&:hover': {
+                                                                                            backgroundColor: 'rgb(125, 220, 195, 0.5)',
+                                                                                        },
+                            }}>
+                                <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
+                            </IconButton>
+                        </Fade>
+                    </div>
                 </div>
-            </Grid>
-            : 
-            <Grid id="home" style={{ height: '90vh', backgroundColor: theme.palette.primary.main, overflow: 'hidden'}}>
-                <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
-                    <Container style={{ paddingTop: '35px'}}>
-                        <Container style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
-                            <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
-                            <Typography variant="h6" style={{ color: theme.palette.primary.textPrimary}}>
-                                Hi, my name is
-                            </Typography>
-                        </Container>
-                        <Typography variant="h1" style={{color: theme.palette.primary.textPrimary}}>
-                            William Mori.
-                        </Typography>
-                        <Typography variant="h1" style={{color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
-                            I build things for the web.
-                        </Typography>
-                        <Typography variant="h6" style={{marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
-                            I'm a software engineer who specializes in full-stack development.<br></br>
-                            I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
-                            Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called
-                            <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: '18px', position: 'relative', top: '3px', 
-                                            paddingRight: '0px', paddingTop: '0px'}} href='https://metalinguist.com/'>Metalinguist</IconButton>.
-                        </Typography>
-                        <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px'}} href={Resume} target="_blank">
-                            Resume
-                        </Button>
-                        <Container style={{display: 'flex', justifyContent: 'end'}}>
-                            <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
-                                <Box m={1}>
-                                    <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
-                                                        "&:hover": {
-                                                        backgroundColor: "transparent",
-                                                        }
-                                                    }}>
-                                        <GitHubIcon sx={{
-                                                            height: '30px',
-                                                            width: '30px', 
-                                                            color: theme.palette.primary.contrastText,
-                                                            transition: 'transform 0.4s',
-                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
-                                                        }}>
-                                        </GitHubIcon>
-                                    </IconButton>  
-                                </Box>
-                            </Fade>
-                            <Fade in timeout={1500} style={{transitionDelay: '700ms'}}>
-                                <Box m={1}>
-                                    <IconButton href='https://www.linkedin.com/in/william-mori-01b891251' target={"_blank"} sx={{
-                                                        "&:hover": {
-                                                        backgroundColor: "transparent",
-                                                        }
-                                                    }}>
-                                        <LinkedInIcon sx={{
-                                                            height: '30px',
-                                                            width: '30px', 
-                                                            color: theme.palette.primary.contrastText,
-                                                            transition: 'transform 0.4s',
-                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
-                                                        }}>
-                                        </LinkedInIcon>
-                                    </IconButton>
-                                </Box>
-                            </Fade>
-                            <Fade in timeout={1500} style={{transitionDelay: '900ms'}}>
-                                <Box m={1}>
-                                    <IconButton href='https://www.instagram.com/will_mori' target={"_blank"} sx={{
-                                                        "&:hover": {
-                                                        backgroundColor: "transparent",
-                                                        }
-                                                    }}>
-                                        <InstagramIcon sx={{
-                                                            height: '30px',
-                                                            width: '30px', 
-                                                            color: theme.palette.primary.contrastText,
-                                                            transition: 'transform 0.4s',
-                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)' }
-                                                        }}>
-                                        </InstagramIcon>
-                                    </IconButton>
-                                </Box>
-                            </Fade>
-                            
-                        </Container>
-                        
-                        
-                        
-                    </Container>
-                </Fade>
-                
-                <div ref={refArrow} style={arrowStyle}>
-                    <Fade in timeout={5000} style={{transitionDelay: '1300ms'}}>
-                        <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
-                                                                                    '&:hover': {
-                                                                                        backgroundColor: 'rgb(125, 220, 195, 0.5)',
-                                                                                    },
-                        }}>
-                            <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
-                        </IconButton>
-                    </Fade>
-                </div>
-            </Grid>
-            }
+            </Fade>
+            
         </React.Fragment>
        
         
