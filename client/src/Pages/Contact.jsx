@@ -56,7 +56,7 @@ const Contact = () => {
         </div>
         <Typography style={{color: theme.palette.primary.textPrimary}}>What's Next?</Typography>
         <Typography variant="h3" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.primary.textContrast, fontWeight: 'bold', paddingTop: '20px', paddingBottom: '20px'}}>Get In Touch</Typography>
-        <Typography style={{color: theme.palette.primary.textSecondary, maxWidth: '705px', fontSize: isSmallTablet ? '12px' : '', paddingLeft: isSmallTablet ? '30px' : '', paddingRight: isSmallTablet ? '30px' : ''}}>
+        <Typography style={{color: theme.palette.primary.textSecondary, maxWidth: '705px', fontSize: isSmallTablet ? '14px' : '', paddingLeft: isSmallTablet ? '30px' : '', paddingRight: isSmallTablet ? '30px' : ''}}>
             While I am primarily looking for a full-stack, frontend, or backend software developer position, I am also open to freelance work! 
             I embrace the opportunity to learn from any problem solving challenges I encounter along my software engineering journey and love working in a collaborative agile environment.
             For any inquiries or if you'd like to just say hi, please feel free to reach out!

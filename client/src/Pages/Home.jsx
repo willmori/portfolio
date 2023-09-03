@@ -70,7 +70,7 @@ const Home = () => {
                     <Typography variant="h1" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
                         I build things for the web.
                     </Typography>
-                    <Typography variant="h6" style={{fontSize: isMobileScreen ? '12px' : '', marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
+                    <Typography variant="h6" style={{fontSize: isMobileScreen ? '14px' : '', marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
                                 I'm a software engineer who specializes in full-stack development.<br></br>
                                 I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
                                 Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called

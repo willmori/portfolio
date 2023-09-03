@@ -111,7 +111,7 @@ const ContributionContent = ({ name, placement }) => {
                                                         }}/></IconButton> : ''}</Typography>
                     
                     <Paper style={{padding: isMobileScreen ? '5px' : '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
-                        <Typography style={{fontSize: isSmallTablet ? isMobileScreen ? '7px' : '10px' : '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
+                        <Typography style={{fontSize: isSmallTablet ? isMobileScreen ? '10px' : '10px' : '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
                     </Paper>
                     <Container style={{display: 'flex', marginTop: isMobileScreen ? '' : '10px', position: 'relative', right: '20px'}}>
                         {getTechStack().map((tech) => (
