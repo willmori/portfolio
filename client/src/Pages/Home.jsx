@@ -70,10 +70,10 @@ const Home = () => {
                     <Typography variant="h1" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.type === 'light' ? theme.palette.primary.textContrast : theme.palette.primary.textSecondary}}>
                         I build things for the web.
                     </Typography>
-                    <Typography variant="h6" style={{fontSize: isMobileScreen ? '14px' : '', marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast}}>
-                                I'm a software engineer who specializes in full-stack development.<br></br>
-                                I enjoy building and designing exceptional digital experiences and working<br></br>alongside those who share the same passion.
-                                Currently, I'm focusing on<br></br>contributing to a new revolutionary translation management system at a<br></br>tech startup called
+                    <Typography variant="h6" style={{fontSize: isMobileScreen ? '14px' : '', marginTop: '20px', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast, maxWidth: '900px'}}>
+                                I'm a software engineer who specializes in full-stack development. 
+                                I enjoy building and designing exceptional digital experiences and working alongside those who share the same passion.
+                                Currently, I'm focusing on contributing to a new revolutionary translation management system at a tech startup called
                                 <IconButton target='_blank' className='underline-on-hover' style={{color: theme.palette.primary.textPrimary, fontSize: isMobileScreen ? '12px' : '18px', position: 'relative', top: '3px', 
                                                 paddingRight: '0px', paddingTop: '0px'}} href='https://metalinguist.com/'>Metalinguist</IconButton>.
                     </Typography>
