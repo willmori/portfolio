@@ -8,7 +8,8 @@ export const rolesDetailsContent = {
                     "Build and update with AWS including S3, route53, and DynamoDB",
                     "Implement custom reusable React components utilizing ES6 JavaScript and Material-UI",
                     "E2E testing with frameworks such as Playwright",
-                    "Perform sprint demo's and participate in scrum meetings"]
+                    "Perform sprint demo's and participate in scrum meetings",
+                    "Resolve a wide variety of debugging tasks within the context of a large legacy codebase"]
     },
     "UCSB": {
         "header": "Frontend Developer",
