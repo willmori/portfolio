@@ -5,8 +5,8 @@ export const ContributionText = {
     "Companies": {
         "header": "Metalinguist",
         "subHeader": "Companies Page",
-        "details": "Build companies feature / companies page within the Metalinguist portal with the ability to add new companies and provide card view of existing companies with their respective data. Implement techniques for load speed optimization and integrate with AWS S3 to upload / download company logos.",
-        "tech_stack": ["React.js", "MUI", "Express.js", "AWS S3", "Node.js"],
+        "details": "Build companies feature / companies page within the Metalinguist portal with the ability to add new companies and provide card view of existing companies with their respective data. Implement techniques for load speed optimization and integrate with AWS S3 / DynamoDB",
+        "tech_stack": ["React.js", "MUI", "Express.js", "AWS S3", "DynamoDB"],
         "headerLink": "https://metalinguist.com"
     },
     "Playwright": {
