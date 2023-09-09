@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Grid, Container, Avatar, Typography, Box } from '@mui/material';
+import { Button, Grid, Container, Avatar, Typography, Box, Tooltip } from '@mui/material';
 import { useTheme } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 import Contribution from '../Components/Contribution';
@@ -14,7 +14,6 @@ const Gallery = () => {
     const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
     const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
     const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -51,9 +50,18 @@ const Gallery = () => {
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
+                            
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                <Contribution name="Companies" placement='odd'/>
+                                {isTabletScreen ?
+                                <Tooltip title="Click on a card to toggle its view!" placement="top-end" open={true}>
+                                    <div>
+                                        <Contribution name="Companies" placement='odd' />
+                                    </div> 
+                                </Tooltip>
+                                :
+                                <Contribution name="Companies" placement='odd'/>}
                             </div>
+                            
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
                                 <Contribution name="Playwright" placement='even' />
                             </div>

@@ -57,7 +57,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: isMobileScreen ? '20px' : '7%', marginRight: isMobileScreen ? '15px' : '7%', marginTop: isMobileScreen ? '' : '20px', paddingTop: isMobileScreen ? '70px': ''}}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: isMobileScreen ? '20px' : '10%', marginRight: isMobileScreen ? '15px' : '7%', marginTop: isMobileScreen ? '' : '20px', paddingTop: isMobileScreen ? '70px': ''}}>
                     <div style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
                         <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
                         <Typography variant="h6" style={{ fontSize: isMobileScreen ? '12px' : '', color: theme.palette.primary.textPrimary}}>
