@@ -16,6 +16,13 @@ export const ContributionText = {
         "tech_stack": ["Playwright", "AWS route53", "DynamoDB", "Node.js"],
         "headerLink": "https://metalinguist.com"
     },
+    "Provisioning": {
+        "header": "Metalinguist",
+        "subHeader": "Real-time Domain Provisioning",
+        "details": "Implement full-stack feature to provide real-time monitoring of new domain provisioning. Custom animated React loading bar synchronized with route53 update status by utilizing the Node.js AWS SDK",
+        "tech_stack": ["React.js", "AWS route53", "Node.js"],
+        "headerLink": "https://metalinguist.com"
+    },
     "CookBook_Social": {
         "header": "CookBook Social",
         "subHeader": "Full-Stack Features",

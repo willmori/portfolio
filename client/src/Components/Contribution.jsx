@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import MetalinguistCompanies from '../assets/MetalinguistCompanies.mp4';
 import Playwright from '../assets/Playwright.mp4';
 import CookBookSocial from '../assets/CookBookSocial.mp4';
+import Provisioning from '../assets/Provisioning.mp4';
 import TideTogether from '../assets/TideTogether.png';
 import ContributionContent from './ContributionContent';
 import { useMediaQuery } from '@mui/material';
@@ -33,6 +34,7 @@ const Contribution = ({ name, placement }) => {
         switch(name) {
             case "Companies": return MetalinguistCompanies;
             case "Playwright": return Playwright;
+            case "Provisioning": return Provisioning;
             case "CookBook_Social": return CookBookSocial;
             case "Tide_Together": return TideTogether;
         }
