@@ -163,8 +163,6 @@ const ContributionContent = ({ name, placement }) => {
                                            
         }
         </React.Fragment>
-       
-        
 
     );
 }
