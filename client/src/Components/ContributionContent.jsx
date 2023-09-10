@@ -18,6 +18,7 @@ const ContributionContent = ({ name, placement }) => {
         switch(name) {
             case "Companies": return ContributionText.Companies.header;
             case "Playwright": return ContributionText.Playwright.header;
+            case "Provisioning": return ContributionText.Provisioning.header;
             case "CookBook_Social": return ContributionText.CookBook_Social.header;
             case "Tide_Together": return ContributionText.Tide_Together.header;
             default: return "NOT FOUND";
@@ -28,6 +29,7 @@ const ContributionContent = ({ name, placement }) => {
         switch(name) {
             case "Companies": return ContributionText.Companies.subHeader;
             case "Playwright": return ContributionText.Playwright.subHeader;
+            case "Provisioning": return ContributionText.Provisioning.subHeader;
             case "CookBook_Social": return ContributionText.CookBook_Social.subHeader;
             case "Tide_Together": return ContributionText.Tide_Together.subHeader;
             default: return "NOT FOUND";
@@ -38,6 +40,7 @@ const ContributionContent = ({ name, placement }) => {
         switch(name) {
             case "Companies": return ContributionText.Companies.details;
             case "Playwright": return ContributionText.Playwright.details;
+            case "Provisioning": return ContributionText.Provisioning.details;
             case "CookBook_Social": return ContributionText.CookBook_Social.details;
             case "Tide_Together": return ContributionText.Tide_Together.details;
             default: return "NOT FOUND";
@@ -48,6 +51,7 @@ const ContributionContent = ({ name, placement }) => {
         switch(name) {
             case "Companies": return ContributionText.Companies.tech_stack;
             case "Playwright": return ContributionText.Playwright.tech_stack;
+            case "Provisioning": return ContributionText.Provisioning.tech_stack;
             case "CookBook_Social": return ContributionText.CookBook_Social.tech_stack;
             case "Tide_Together": return ContributionText.Tide_Together.tech_stack;
             default: return "NOT FOUND";
@@ -58,6 +62,7 @@ const ContributionContent = ({ name, placement }) => {
         switch(name) {
             case "Companies": return ContributionText.Companies.headerLink;
             case "Playwright": return ContributionText.Playwright.headerLink;
+            case "Provisioning": return ContributionText.Provisioning.headerLink;
             case "CookBook_Social": return ContributionText.CookBook_Social.headerLink;
             case "Tide_Together": return ContributionText.Tide_Together.headerLink;
             default: return "NOT FOUND";

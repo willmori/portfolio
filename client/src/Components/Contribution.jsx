@@ -33,6 +33,7 @@ const Contribution = ({ name, placement }) => {
         switch(name) {
             case "Companies": return MetalinguistCompanies;
             case "Playwright": return Playwright;
+            case "Provisioning": return Provisioning;
             case "CookBook_Social": return CookBookSocial;
             case "Tide_Together": return TideTogether;
         }

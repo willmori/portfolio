@@ -34,8 +34,9 @@ const Gallery = () => {
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
                             <Contribution name="Companies" placement='odd'/>
                             <Contribution name="Playwright" placement='even' />
-                            <Contribution name="CookBook_Social" placement='odd' />
-                            <Contribution name="Tide_Together" placement='even' />
+                            <Contribution name="Provisioning" placement='odd' />
+                            <Contribution name="CookBook_Social" placement='even' />
+                            <Contribution name="Tide_Together" placement='odd' />
                         </Container>     
                     </Container>
                 </Container>
