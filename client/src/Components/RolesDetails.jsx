@@ -62,10 +62,7 @@ const RolesDetails = ({ role }) => {
                     
                 )}
             </List>
-            
-                
-                
-            
+ 
         </Grid>
         
     );

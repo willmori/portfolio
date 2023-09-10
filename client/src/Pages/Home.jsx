@@ -150,8 +150,7 @@ const Home = () => {
                 </div>
             </Fade>
             
-        </React.Fragment>
-       
+        </React.Fragment>      
         
     );
 }
