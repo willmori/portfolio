@@ -35,8 +35,9 @@ const Gallery = () => {
                             <Contribution name="Companies" placement='odd'/>
                             <Contribution name="Playwright" placement='even' />
                             <Contribution name="Provisioning" placement='odd' />
-                            <Contribution name="CookBook_Social" placement='even' />
-                            <Contribution name="Tide_Together" placement='odd' />
+                            <Contribution name="Tide_Together" placement='even' />
+                            <Contribution name="CookBook_Social" placement='odd' />
+                            
                         </Container>     
                     </Container>
                 </Container>
@@ -67,13 +68,14 @@ const Gallery = () => {
                                 <Contribution name="Playwright" placement='even' />
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                <Contribution name="CookBook_Social" placement='odd' />
+                                <Contribution name="Provisioning" placement='odd' />
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
                                 <Contribution name="Tide_Together" placement='even' />
                             </div>
-                            
-                            
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="CookBook_Social" placement='odd' />
+                            </div>
                             
                         </Container>     
                     </Container>
