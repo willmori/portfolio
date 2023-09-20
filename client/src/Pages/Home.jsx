@@ -12,7 +12,8 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { HashLink } from 'react-router-hash-link';
 import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from '@mui/material';
-import './Home.css'
+import TypedOut from '../Components/TypedOut';
+import './Home.css';
 
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
 
     const [ refArrow, inViewArrow ] = useInView({
         triggerOnce: false, // Trigger only once
-        threshold: 0.8, // Element is considered in view when 50% is visible
+        threshold: 0.9, // Element is considered in view when 50% is visible
       });
 
     useEffect(() => {
@@ -43,10 +44,11 @@ const Home = () => {
         opacity: isVisible ? 1 : 0, // Fade in when isVisible is true, otherwise fade out
         transition: 'opacity 0.5s', // Add a smooth transition effect
         display: 'flex',
-        justifyContent: 'center', 
-        alignItems: 'center',
+        justifyContent: 'end', 
+        alignItems: 'end',
         position: 'absolute',
-        bottom: '20px'
+        bottom: '20px',
+        height: '300px'
     };
 
     useEffect(() => {
@@ -56,11 +58,11 @@ const Home = () => {
     }, []);
 
     return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', border: '1px solid red',
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh',
                     flexDirection: 'column'}}>
-            <Typography variant={isMobileScreen ? "" : "h6"} style={{color: theme.palette.primary.textPrimary}}>Hi, my name is William Mori</Typography>
-            <Typography variant={isTabletScreen ? isMobileScreen ? 'h4' : 'h3' : "h2"} style={{color: theme.palette.primary.textContrast}}>Software Engineer</Typography>
-            <div style={{display: 'flex'}}>
+            <Typography variant={isMobileScreen ? "" : "h6"} style={{color: theme.palette.primary.textPrimary, marginBottom: '10px'}}>Hi, my name is William Mori</Typography>
+            <TypedOut />
+            <div style={{display: 'flex', marginTop: '20px'}}>
                 <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
                                     <Box m={1}>
                                     <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
@@ -116,6 +118,9 @@ const Home = () => {
                                 </Box>
                         </Fade>
             </div>
+            <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px', maxWidth: '100px'}} href={Resume} target="_blank">
+                                Resume
+                    </Button>
             <div ref={refArrow} style={arrowStyle}>
                         <Fade in timeout={5000} style={{transitionDelay: '1000ms'}}>
                             <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
