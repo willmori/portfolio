@@ -45,7 +45,8 @@ const Home = () => {
         display: 'flex',
         justifyContent: 'center', 
         alignItems: 'center',
-        paddingTop: '60px'
+        position: 'absolute',
+        bottom: '20px'
     };
 
     useEffect(() => {
@@ -55,9 +56,102 @@ const Home = () => {
     }, []);
 
     return (
-        <React.Fragment>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', border: '1px solid red',
+                    flexDirection: 'column'}}>
+            <Typography variant={isMobileScreen ? "" : "h6"} style={{color: theme.palette.primary.textPrimary}}>Hi, my name is William Mori</Typography>
+            <Typography variant={isTabletScreen ? isMobileScreen ? 'h4' : 'h3' : "h2"} style={{color: theme.palette.primary.textContrast}}>Software Engineer</Typography>
+            <div style={{display: 'flex'}}>
+                <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>
+                                    <Box m={1}>
+                                    <IconButton href='https://github.com/willmori' target={"_blank"} sx={{
+                                                        "&:hover": {
+                                                        backgroundColor: "transparent",
+                                                        }
+                                                    }}>
+                                        <GitHubIcon sx={{
+                                                            height: '30px',
+                                                            width: '30px', 
+                                                            color: theme.palette.primary.textSecondary,
+                                                            transition: 'transform 0.4s',
+                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
+                                                        }}>
+                                        </GitHubIcon>
+                                    </IconButton>  
+                                </Box>
+                            </Fade>
+                            <Fade in timeout={1500} style={{transitionDelay: '700ms'}}>
+                                <Box m={1}>
+                                    <IconButton href='https://www.linkedin.com/in/william-mori-01b891251' target={"_blank"} sx={{
+                                                        "&:hover": {
+                                                        backgroundColor: "transparent",
+                                                        }
+                                                    }}>
+                                        <LinkedInIcon sx={{
+                                                            height: '30px',
+                                                            width: '30px', 
+                                                            color: theme.palette.primary.textSecondary,
+                                                            transition: 'transform 0.4s',
+                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
+                                                        }}>
+                                        </LinkedInIcon>
+                                    </IconButton>
+                                </Box>
+                            </Fade>
+                            <Fade in timeout={1500} style={{transitionDelay: '900ms'}}>
+                                <Box m={1}>
+                                    <IconButton href='https://www.instagram.com/will_mori' target={"_blank"} sx={{
+                                                        "&:hover": {
+                                                        backgroundColor: "transparent",
+                                                        }
+                                                    }}>
+                                        <InstagramIcon sx={{
+                                                            height: '30px',
+                                                            width: '30px', 
+                                                            color: theme.palette.primary.textSecondary,
+                                                            transition: 'transform 0.4s',
+                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)' }
+                                                        }}>
+                                        </InstagramIcon>
+                                    </IconButton>
+                                </Box>
+                        </Fade>
+            </div>
+            <div ref={refArrow} style={arrowStyle}>
+                        <Fade in timeout={5000} style={{transitionDelay: '1000ms'}}>
+                            <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
+                                                                                        '&:hover': {
+                                                                                            backgroundColor: 'rgb(125, 220, 195, 0.5)',
+                                                                                        },
+                            }}>
+                                <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
+                            </IconButton>
+                        </Fade>
+            </div>
+        </div>
+    );
+}
+
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<React.Fragment>
             <Fade in timeout={2000} style={{transitionDelay: '300ms'}}>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'start', marginLeft: isMobileScreen ? '20px' : '10%', marginRight: isMobileScreen ? '15px' : '7%', marginTop: isMobileScreen ? '' : '20px', paddingTop: isMobileScreen ? '70px': ''}}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: isMobileScreen ? '20px' : '10%',
+                                marginRight: isMobileScreen ? '15px' : '7%', marginTop: isMobileScreen ? '' : '20px', paddingTop: isMobileScreen ? '10vh': '0vh',
+                                backgroundSize: 'cover'}}>
                     <div style={{display: 'flex', alignItems: 'end', paddingLeft: '0px', marginBottom: '20px'}}>
                         <Avatar style={{ marginRight: '10px'}} src={Photo}></Avatar>
                         <Typography variant="h6" style={{ fontSize: isMobileScreen ? '12px' : '', color: theme.palette.primary.textPrimary}}>
@@ -150,9 +244,5 @@ const Home = () => {
                 </div>
             </Fade>
             
-        </React.Fragment>      
-        
-    );
-}
-
-export default Home;
+        </React.Fragment>
+*/
