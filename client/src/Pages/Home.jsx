@@ -23,6 +23,7 @@ const Home = () => {
     const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
     const isSmallTablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
     const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+    const removeArrow = useMediaQuery('(max-height: 500px)');
 
     const [isLoaded, setIsLoaded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -121,7 +122,8 @@ const Home = () => {
             <Button variant="contained" backgroundColor='transparent' style={{marginTop: '45px', maxWidth: '100px'}} href={Resume} target="_blank">
                                 Resume
                     </Button>
-            <div ref={refArrow} style={arrowStyle}>
+            {!removeArrow ?
+                <div ref={refArrow} style={arrowStyle}>
                         <Fade in timeout={5000} style={{transitionDelay: '1000ms'}}>
                             <IconButton component={HashLink} to="#aboutme" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
                                                                                         '&:hover': {
@@ -131,7 +133,8 @@ const Home = () => {
                                 <ArrowDownwardIcon sx={{height: '35px', width: '35px', color: theme.palette.primary.textContrast}} />
                             </IconButton>
                         </Fade>
-            </div>
+                </div>
+            : ''}
         </div>
     );
 }

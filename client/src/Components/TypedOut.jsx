@@ -16,7 +16,7 @@ function TypedOut() {
 
     useEffect(() => {
         const options = {
-            strings: ["Software Engineer", "User Interface Designer", "React / JavaScript"],
+            strings: ["Software Engineer", "UI / UX Designer", "React / JavaScript"],
             typeSpeed: 25,
             backSpeed: 25,
             backDelay: 2500,
