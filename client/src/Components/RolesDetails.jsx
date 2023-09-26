@@ -52,16 +52,15 @@ const RolesDetails = ({ role }) => {
             </Typography>
             <Typography style={{ marginTop: '2px', color: theme.palette.primary.textSecondary}}>{getDate()}</Typography>
             
-            
             <List style={{paddingLeft: '0px'}}>
                 {getBodyText().map((details, index) => 
                     <ListItem style={{paddingLeft: '0px'}}>
-                        <ArrowRightIcon style={{color: theme.palette.primary.textPrimary, position: 'relative', right: '8px'}}/>
                         <ListItemText primary={details} style={{color: theme.palette.primary.textSecondary}}></ListItemText>
                     </ListItem>
                     
                 )}
             </List>
+            
  
         </Grid>
         
@@ -69,3 +68,9 @@ const RolesDetails = ({ role }) => {
 }
 
 export default RolesDetails;
+
+
+
+/*
+
+*/
