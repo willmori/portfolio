@@ -19,7 +19,7 @@ function TypedOut() {
             strings: ["Software Engineer", "UI / UX Designer", "React / JavaScript"],
             typeSpeed: 40,
             backSpeed: 25,
-            backDelay: 2500,
+            backDelay: 2000,
             loop: true,
             showCursor: false
         };

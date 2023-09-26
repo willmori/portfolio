@@ -21,7 +21,7 @@ const AboutMe = () => {
         threshold: 0.1, // Percentage of component visibility to trigger
       });
 
-    const technologies = ["DS & Algorithms I, II", "Database Systems", "Machine Learning & AI", "Operating Systems", "Obj Oriented Design", "Adv App Programming"]
+    const technologies = ["DS & Algorithms I, II", "Database Systems", "Machine Learning & AI", "Operating Systems", "Obj Oriented Design", "Adv App Programming"];
  
     return (
         <React.Fragment>
@@ -43,8 +43,9 @@ const AboutMe = () => {
                         <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                             {aboutMeContent.paragraph3}
                         </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '17px'}}>
-                            {aboutMeContent.paragraph4}
+                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '35px'}}>
+                            Throughout my undergrad in computer science, these are some of the notable courses I took utilizing 
+                            <Typography style={{display: 'inline', color: theme.palette.primary.textPrimary}}> C++, Python, Java, SQL, and React</Typography>
                         </Typography>
                         <Grid container style={{width: '450px', position: 'relative', right: '32px'}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                             {technologies.map((technology) => (
@@ -90,8 +91,9 @@ const AboutMe = () => {
                         <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                             {aboutMeContent.paragraph3}
                         </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '17px'}}>
-                            {aboutMeContent.paragraph4}
+                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '35px'}}>
+                            Throughout my undergrad in computer science, these are some of the notable courses I took utilizing 
+                            <Typography style={{display: 'inline', color: theme.palette.primary.textPrimary}}> C++, Python, Java, SQL, and React</Typography>
                         </Typography>
                         <Grid container style={{maxWidth: '450px', position: 'relative', }} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                             {technologies.map((technology) => (
