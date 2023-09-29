@@ -12,6 +12,7 @@ import darkTheme from './DarkTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
 import StarryNight from './StarryNight';
+import Skills from './Components/Skills';
 
 
 function App(props) {
@@ -31,7 +32,7 @@ function App(props) {
             <Navbar />
             <Home />
             <AboutMe />
-            <Experience />
+            <Skills />
             <Gallery />
             <Contact />
           </div>

@@ -100,10 +100,10 @@ const ContributionContent = ({ name, placement }) => {
             :
                 isTabletScreen ?
             
-                <Paper style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'rgba(32,33,36,0.98', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: isMobileScreen ? '8px' : '20px', width: '100%', height: 'auto'}}>
-                    <Typography><a className='underline-on-hover' style={{ fontSize: isMobileScreen ? '8px' : '', color: theme.palette.primary.textPrimary}} href={getHeaderLink()} target="_blank">{getHeader()}</a></Typography>
+                <Paper style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'rgba(32,33,36,0.98', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: isSmallTablet ? '8px' : '20px', width: '100%', height: 'auto'}}>
+                    <Typography><a className='underline-on-hover' style={{ fontSize: isSmallTablet ? '8px' : '', color: theme.palette.primary.textPrimary}} href={getHeaderLink()} target="_blank">{getHeader()}</a></Typography>
                     
-                    <Typography style={{position: 'relative', bottom: isMobileScreen ? '7px' : '', color: theme.palette.primary.textContrast, fontSize: isMobileScreen ? '12px' : '22px', fontWeight: 'bold', marginBottom: isMobileScreen ? '2px' : '15px'}}>{getSubHeader()} {isMobileScreen && name === 'CookBook_Social' ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
+                    <Typography style={{position: 'relative', bottom: isSmallTablet ? '7px' : '', color: theme.palette.primary.textContrast, fontSize: isSmallTablet ? '12px' : '22px', fontWeight: 'bold', marginBottom: isSmallTablet ? '2px' : '15px'}}>{getSubHeader()} {isSmallTablet && name === 'CookBook_Social' ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
                                                             "&:hover": {
                                                             backgroundColor: "transparent",
                                                             },
@@ -116,16 +116,16 @@ const ContributionContent = ({ name, placement }) => {
                                                             "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
                                                         }}/></IconButton> : ''}</Typography>
                     
-                    <Paper style={{position: 'relative', bottom: isMobileScreen ? '7px' : '', padding: isMobileScreen ? '5px' : '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
-                        <Typography style={{fontSize: isSmallTablet ? isMobileScreen ? '10px' : '10px' : '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
+                    <Paper style={{position: 'relative', bottom: isSmallTablet ? '7px' : '', padding: isSmallTablet ? '5px' : '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
+                        <Typography style={{fontSize: isSmallTablet ? '10px' : '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
                     </Paper>
-                    <Container style={{display: 'flex', marginTop: isMobileScreen ? '' : '10px', position: 'relative', right: !isMobileScreen ? '20px' : '15px', bottom: isMobileScreen ? '7px' : ''}}>
+                    <Container style={{display: 'flex', marginTop: isSmallTablet ? '' : '10px', position: 'relative', right: !isSmallTablet ? '20px' : '15px', bottom: isSmallTablet ? '7px' : ''}}>
                         {getTechStack().map((tech) => (
-                                <Typography variant="body1" style={{ fontSize: isMobileScreen ? '7px' : '14px', padding: isMobileScreen ? '3px' : '10px', color: theme.palette.primary.textSecondary}}>
+                                <Typography variant="body1" style={{ fontSize: isSmallTablet ? '7px' : '14px', padding: isSmallTablet ? '3px' : '10px', color: theme.palette.primary.textSecondary}}>
                                     {tech}
                                 </Typography>))}
                     </Container>
-                    {name === "CookBook_Social" && !isMobileScreen ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
+                    {name === "CookBook_Social" && !isSmallTablet ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
                                                             "&:hover": {
                                                             backgroundColor: "transparent",
                                                             }

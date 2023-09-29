@@ -41,7 +41,7 @@ const darkTheme = createTheme({
     },
     breakpoints: {
         values: {
-          xs: 550,       // Extra small devices (phones)
+          xs: 0,       // Extra small devices (phones)
           sm: 700,     // small tablet
           md: 1000,     // tablet 
           lg: 1330,    // screen cut off(large desktops)

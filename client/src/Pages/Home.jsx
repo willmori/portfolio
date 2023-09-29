@@ -61,7 +61,7 @@ const Home = () => {
     return (
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh',
                     flexDirection: 'column'}}>
-            <Typography variant={isMobileScreen ? "" : "h6"} style={{color: theme.palette.primary.textPrimary, marginBottom: '10px'}}>Hi, my name is William Mori</Typography>
+            <Typography variant={isSmallTablet ? "" : "h6"} style={{color: theme.palette.primary.textPrimary, marginBottom: '10px'}}>Hi, my name is William Mori</Typography>
             <TypedOut />
             <div style={{display: 'flex', marginTop: '20px'}}>
                 <Fade in timeout={1500} style={{transitionDelay: '500ms'}}>

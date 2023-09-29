@@ -13,7 +13,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
     const theme = useTheme();
     
     const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
-    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
     const [isNavVisible, setIsNavVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -62,7 +62,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                             </ListItem>
                         </Fade>
                         <Fade in timeout={1500} style={{transitionDelay: '400ms'}}>
-                            <ListItem component={HashLink} to="#experience" smooth button disableRipple sx={{
+                            <ListItem component={HashLink} to="#skills" smooth button disableRipple sx={{
                                                         borderBottom: `1px solid transparent`,
                                                         "&:hover": {
                                                         backgroundColor: "transparent",
@@ -70,7 +70,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                         }
                                                     }}>
                                 <Typography style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
-                                <ListItemText primary="Experience" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                                <ListItemText primary="Skills" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                             </ListItem>
                         </Fade>
                         <Fade in timeout={1500} style={{transitionDelay: '600ms'}}>
@@ -82,7 +82,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                                                         }
                                                     }}>
                                 <Typography style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                                <ListItemText primary="Gallery" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
+                                <ListItemText primary="Contributions" style={{ textDecoration: 'none', color: theme.palette.type === 'dark' ? theme.palette.primary.textSecondary : theme.palette.primary.textContrast }} />
                             </ListItem>
                         </Fade>
                         <Fade in timeout={1500} style={{transitionDelay: '800ms'}}>

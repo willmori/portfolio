@@ -23,7 +23,7 @@ const Gallery = () => {
     return (
         <React.Fragment>
             {!isCutOffScreen ?
-            <Grid style={{ marginTop: '200px'}} id="gallery">
+            <Grid style={{ marginTop: '300px'}} id="gallery">
                 <Container style={{width: '1300px', display: 'flex'}} >
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
@@ -42,12 +42,12 @@ const Gallery = () => {
                     </Container>
                 </Container>
             </Grid> :
-            <Grid style={{ marginTop: '200px' }} id="gallery">
+            <Grid style={{ marginTop: '300px' }} id="gallery">
                 <Container style={{maxWidth: '1300px', display: 'flex'}} >
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                             <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                            {isMobileScreen ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>
+                            {isSmallTablet ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>
                             : <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>}
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>

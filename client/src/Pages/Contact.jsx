@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
      <>
-      <div style={{marginTop: '100px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}} id="contact">
+      <div style={{marginTop: '100px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center',}} id="contact">
         <div ref={refArrow} style={arrowStyle}>
                 <IconButton component={HashLink} to="#top" smooth sx={{backgroundColor: 'rgba(128,128,128,0.2)',transition: 'background-color 0.3s',
                                                                             '&:hover': {
@@ -55,7 +55,7 @@ const Contact = () => {
                 </IconButton>
         </div>
         <Typography style={{color: theme.palette.primary.textPrimary}}>What's Next?</Typography>
-        <Typography variant="h3" style={{fontSize: isMobileScreen ? '30px' : '', color: theme.palette.primary.textContrast, fontWeight: 'bold', paddingTop: '20px', paddingBottom: '20px'}}>Get In Touch</Typography>
+        <Typography variant="h3" style={{fontSize: isSmallTablet ? '30px' : '', color: theme.palette.primary.textContrast, fontWeight: 'bold', paddingTop: '20px', paddingBottom: '20px'}}>Get In Touch</Typography>
         <Typography style={{color: theme.palette.primary.textSecondary, maxWidth: '705px', fontSize: isSmallTablet ? '14px' : '', paddingLeft: isSmallTablet ? '30px' : '', paddingRight: isSmallTablet ? '30px' : ''}}>
             While I am primarily looking for a full-stack, frontend, or backend software developer position, I am also open to freelance work! 
             I embrace the opportunity to learn from any problem solving challenges I encounter along my software engineering journey and love working in a collaborative agile environment.
