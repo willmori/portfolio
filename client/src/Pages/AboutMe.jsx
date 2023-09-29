@@ -14,7 +14,7 @@ const AboutMe = () => {
     const theme = useTheme();
     const isCutOffScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
     const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
-    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
@@ -34,27 +34,25 @@ const AboutMe = () => {
                             <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>About Me</Typography>
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph1}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph2}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph3}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '35px'}}>
-                            Throughout my undergrad in computer science, these are some of the notable courses I took utilizing 
-                            <Typography style={{display: 'inline', color: theme.palette.primary.textPrimary}}> C++, Python, Java, SQL, and React</Typography>
-                        </Typography>
-                        <Grid container style={{width: '450px', position: 'relative', right: '32px'}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                            {technologies.map((technology) => (
-                                <Grid xs={6} style={{display: 'flex', alignItems: 'center', padding: '5px'}}>
-                                    <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                                    <Typography style={{marginLeft: '6px', color: theme.palette.primary.textSecondary}}>{technology}</Typography>
-                                </Grid>
-                            ))}
-                        </Grid>
+                        <div style={{maxWidth: '520px'}}>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
+                                {aboutMeContent.paragraph1}
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
+                                {aboutMeContent.paragraph2}
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
+                                Fast forward to today...
+                            </Typography>
+                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast}}>Software Engineer Intern
+                            <span style={{color: theme.palette.primary.textPrimary}}> @ </span>
+                            <a href={'https://metalinguist.com/'} target='_blank' className='underline-on-hover' 
+                                style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>Metalinguist</a>
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textPrimary, marginBottom: '15px'}}>July 2023 - Present</Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary}}>{aboutMeContent.Metalinguist}</Typography>
+                        </div>
+                        
                     </Container>
                     <Container style={{width: '500px'}}>
                         <Avatar elevation={5} src={Casual} sx={{
@@ -82,27 +80,24 @@ const AboutMe = () => {
                             : <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>About Me</Typography>}
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph1}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph2}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
-                            {aboutMeContent.paragraph3}
-                        </Typography>
-                        <Typography style={{maxWidth: '520px', color: theme.palette.primary.textSecondary, marginBottom: '35px'}}>
-                            Throughout my undergrad in computer science, these are some of the notable courses I took utilizing 
-                            <Typography style={{display: 'inline', color: theme.palette.primary.textPrimary}}> C++, Python, Java, SQL, and React</Typography>
-                        </Typography>
-                        <Grid container style={{maxWidth: '450px', position: 'relative', }} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                            {technologies.map((technology) => (
-                                <Grid xs={6} style={{display: 'flex', alignItems: 'center', padding: '5px'}}>
-                                    <ArrowRightIcon style={{color: theme.palette.primary.textPrimary}}/>
-                                    <Typography style={{marginLeft: '6px', color: theme.palette.primary.textSecondary}}>{technology}</Typography>
-                                </Grid>
-                            ))}
-                        </Grid>
+                        <div style={{maxWidth: '520px'}}>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>
+                                {aboutMeContent.paragraph1}
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>
+                                {aboutMeContent.paragraph2}
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>
+                                Fast forward to today...
+                            </Typography>
+                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast, textAlign: isMobileScreen ? 'center' : ''}}>Software Engineer Intern
+                            <span style={{color: theme.palette.primary.textPrimary}}> @ </span>
+                            <a href={'https://metalinguist.com/'} target='_blank' className='underline-on-hover' 
+                                style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>Metalinguist</a>
+                            </Typography>
+                            <Typography style={{ color: theme.palette.primary.textPrimary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>July 2023 - Present</Typography>
+                            <Typography style={{ color: theme.palette.primary.textSecondary,  textAlign: isMobileScreen ? 'center' : ''}}>{aboutMeContent.Metalinguist}</Typography>
+                        </div>
                     </Container>
                     <Container style={{maxWidth: '500px'}}>
                         <Avatar elevation={5} src={Casual} sx={{

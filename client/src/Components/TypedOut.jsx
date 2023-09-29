@@ -9,14 +9,14 @@ function TypedOut() {
     const theme = useTheme();
     const typedTargetRef = useRef(null);
 
-    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+    const isMobileScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
     const isTabletScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
     const currentVariant = isTabletScreen ? (isMobileScreen ? 'h4' : 'h3') : 'h2';
 
     useEffect(() => {
         const options = {
-            strings: ["Software Engineer", "UI / UX Designer", "React / JavaScript"],
+            strings: ["Software Engineer", "UI / UX Designer", "CS Graduate"],
             typeSpeed: 40,
             backSpeed: 25,
             backDelay: 2000,
