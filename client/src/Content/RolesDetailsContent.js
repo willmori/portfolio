@@ -11,7 +11,7 @@ export const rolesDetailsContent = {
     "UCSB": {
         "header": "Frontend Developer",
         "date": "Dec 2020 - Mar 2021",
-        "details": ["During my second year at the University of California, Santa Barbara, I enrolled in a class called Advanced Applications Programming which involved working on the UCSB admin portal under the supervision of Professor Phil Conrad. This was my first introduction to the field of software development and I learned so much about how full-stack applications worked.",
+        "details": ["During my second year at the University of California, Santa Barbara, I enrolled in a class called Advanced Applications Programming which involved working on the UCSB admin portal under the supervision of Professor Phil Conrad. This was my first introduction to the field of software development and I learned so much about how full-stack applications work.",
                     "Most of my contributions were on the frontend using React, however I also gained fundamental knowledge of how to integrate with backend Java Spring Boot services.",
                     "The purpose of this class was to give students a real world example of how software teams operate requiring us to emphasize 90% code coverage in testing using JEST, participate in scrum meetings, and conduct code reviews."]
     },
