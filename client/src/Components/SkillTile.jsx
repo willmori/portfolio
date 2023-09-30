@@ -19,7 +19,7 @@ function SkillTile({ logo, width, height, type }) {
                         transform: 'translate(-50%, -50%)',
                         width: '110%',
                         height: '110%',
-                        background: 'radial-gradient(circle, rgba(255,255,255,0.4) 10%, rgba(255,255,255,0) 65%)',
+                        background: 'radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 65%)',
                         zIndex: 5, // Place it behind the logo
                     }}></div>
                 <div style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

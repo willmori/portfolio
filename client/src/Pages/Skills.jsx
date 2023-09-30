@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Button, Grid, Container, Typography, List, ListItem, ListItemText, Paper } from '@mui/material';
 import { useTheme } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
-import SkillTile from './SkillTile';
+import SkillTile from '../Components/SkillTile';
 import ReactLogo from '../assets/React.png';
 import MUILogo from '../assets/MUI.png';
 import NodeLogo from '../assets/Node.png';

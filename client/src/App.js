@@ -12,7 +12,7 @@ import darkTheme from './DarkTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
 import StarryNight from './StarryNight';
-import Skills from './Components/Skills';
+import Skills from './Pages/Skills';
 
 
 function App(props) {
