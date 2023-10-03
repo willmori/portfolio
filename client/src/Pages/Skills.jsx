@@ -8,6 +8,7 @@ import ReactLogo from '../assets/React.png';
 import MUILogo from '../assets/MUI.png';
 import NodeLogo from '../assets/Node.png';
 import ExpressLogo from '../assets/Express.webp';
+import Express from '../assets/Express.png';
 import JavaScriptLogo from '../assets/JavaScript.png';
 import PythonLogo from '../assets/Python.png';
 import CLogo from '../assets/C++.png';
@@ -38,7 +39,7 @@ const Skills = () => {
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={ReactLogo} width={'180px'} height={'auto'} />}</Grid>
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={MUILogo} width={'auto'} height={'70px'} type={'mui'} />}</Grid>
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={NodeLogo} width={'215px'} height={'auto'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={ExpressLogo} width={'190px'} height={'auto'} />}</Grid>
+                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={Express} width={'auto'} height={'40px'} type={'express'} />}</Grid>
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={JavaScriptLogo} width={'auto'} height={'60px'} type={'javascript'} />}</Grid>
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={PythonLogo} width={'180px'} height={'auto'} />}</Grid>
                     <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={CLogo} width={'120px'} height={'auto'} />}</Grid>

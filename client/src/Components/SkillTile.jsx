@@ -13,7 +13,7 @@ function SkillTile({ logo, width, height, type }) {
 
     return (
         <div>
-            <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ width: '220px', height: '220px', display: 'flex', flexDirection: 'column', 
+            <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ width: '230px', height: '230px', display: 'flex', flexDirection: 'column', 
                         justifyContent: 'center', alignItems: 'center', borderRadius: '15px', position: 'relative',}}>
                 <div style={{
                         position: 'absolute',
@@ -25,8 +25,8 @@ function SkillTile({ logo, width, height, type }) {
                         background: 'radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 65%)',
                         zIndex: 5, // Place it behind the logo
                     }}></div>
-                <div style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                
+                <div style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', right: type === 'mui' ? '5px' : ''}}>
+                    {type === 'express' ? <Typography style={{display: 'inline', fontSize: '35px', color: '#878787', position: 'relative', top: '5px', fontWeight: 100}}>Express</Typography> : ''}
                     <img src={logo} style={{width: width, height: height, position: 'relative',
                             zIndex: 6,}} alt="" />
                     {type === 'mui' ? <Typography style={{display: 'inline', fontSize: '35px', color: 'rgb(80,175,250)'}}>MUI</Typography> : ''}
