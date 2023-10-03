@@ -18,7 +18,7 @@ const Gallery = () => {
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
         threshold: 0.3, // Percentage of component visibility to trigger
-      });
+    });
  
     return (
         <React.Fragment>

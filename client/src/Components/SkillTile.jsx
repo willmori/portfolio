@@ -1,16 +1,19 @@
 import React from "react";
 import { Typography, useTheme } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 
 function SkillTile({ logo, width, height, type }) { 
 
     const theme = useTheme();
 
-    console.log(width)
-    console.log(height)
+    const [ref, inView] = useInView({
+        triggerOnce: false, // Trigger only once
+        threshold: 0.2, // Percentage of component visibility to trigger
+    });
 
     return (
         <div>
-            <div style={{ width: '220px', height: '220px', display: 'flex', flexDirection: 'column', 
+            <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ width: '220px', height: '220px', display: 'flex', flexDirection: 'column', 
                         justifyContent: 'center', alignItems: 'center', borderRadius: '15px', position: 'relative',}}>
                 <div style={{
                         position: 'absolute',

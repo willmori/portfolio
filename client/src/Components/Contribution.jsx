@@ -28,7 +28,7 @@ const Contribution = ({ name, placement }) => {
     const [ref, inView] = useInView({
         triggerOnce: false, // Trigger only once
         threshold: 0.2, // Percentage of component visibility to trigger
-      });
+    });
 
     function getVideoSource() {
         switch(name) {
