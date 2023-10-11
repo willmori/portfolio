@@ -90,7 +90,7 @@ const AboutMe = () => {
                             <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>
                                 Fast forward to today...
                             </Typography>
-                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast, textAlign: isMobileScreen ? 'center' : ''}}>Software Engineer Intern
+                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast, textAlign: isMobileScreen ? 'center' : ''}}>Junior Software Engineer
                             <span style={{color: theme.palette.primary.textPrimary}}> @ </span>
                             <a href={'https://metalinguist.com/'} target='_blank' className='underline-on-hover' 
                                 style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>Metalinguist</a>
