@@ -178,39 +178,3 @@ export default ContributionContent;
 
 
 
-
-
-
-
-/*
-
-
-<Container style={{display: 'flex', flexDirection: 'column', minWidth: '545px', alignItems: 'flex-end', position: 'relative', left: '160px', bottom: '50px'}}>
-                
-                    <Typography><a className='underline-on-hover' style={{color: theme.palette.primary.textPrimary}} href={getHeaderLink()} target="_blank">{getHeader()}</a></Typography>
-                    <Typography style={{color: theme.palette.primary.textContrast, fontSize: '22px', fontWeight: 'bold', marginBottom: '15px'}}>{getSubHeader()}</Typography>
-                    <Paper style={{padding: '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
-                        <Typography align='right' style={{color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
-                    </Paper>
-                    <Container style={{display: 'flex', justifyContent: 'end', marginTop: '10px', position: 'relative', left: '30px', right: '32px' }}>
-                        {getTechStack().map((tech) => (
-                                <Typography variant="body1" style={{ fontSize: '14px', padding: '10px', color: theme.palette.primary.textSecondary}}>
-                                    {tech}
-                                </Typography>))}
-                    </Container>
-                    {name === "CookBook_Social" ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
-                                                            "&:hover": {
-                                                            backgroundColor: "transparent",
-                                                            }
-                                                        }}><GitHubIcon sx={{
-                                                            height: '30px',
-                                                            width: '30px', 
-                                                            color: theme.palette.primary.contrastText,
-                                                            transition: 'transform 0.4s',
-                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
-                                                        }}/></IconButton> : ''}
-                
-                
-            </Container>       
-
-*/
