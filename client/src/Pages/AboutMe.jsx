@@ -44,7 +44,7 @@ const AboutMe = () => {
                             <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px'}}>
                                 Fast forward to today...
                             </Typography>
-                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast}}>Junior Software Engineer
+                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast}}>Jr. Software Engineer
                             <span style={{color: theme.palette.primary.textPrimary}}> @ </span>
                             <a href={'https://metalinguist.com/'} target='_blank' className='underline-on-hover' 
                                 style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>Metalinguist</a>
@@ -90,7 +90,7 @@ const AboutMe = () => {
                             <Typography style={{ color: theme.palette.primary.textSecondary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>
                                 Fast forward to today...
                             </Typography>
-                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast, textAlign: isMobileScreen ? 'center' : ''}}>Junior Software Engineer
+                            <Typography variant='h6' style={{color: theme.palette.primary.textContrast, textAlign: isMobileScreen ? 'center' : ''}}>Jr. Software Engineer
                             <span style={{color: theme.palette.primary.textPrimary}}> @ </span>
                             <a href={'https://metalinguist.com/'} target='_blank' className='underline-on-hover' 
                                 style={{color: theme.palette.primary.textPrimary, fontWeight: 'bold'}}>Metalinguist</a>
@@ -98,7 +98,20 @@ const AboutMe = () => {
                             <Typography style={{ color: theme.palette.primary.textPrimary, marginBottom: '15px', textAlign: isMobileScreen ? 'center' : ''}}>July 2023 - Present</Typography>
                             <Typography style={{ color: theme.palette.primary.textSecondary,  textAlign: isMobileScreen ? 'center' : ''}}>{aboutMeContent.Metalinguist}</Typography>
                         </div>
+                        <Container style={{ maxWidth: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '220px' }}>
+                            <Avatar elevation={5} src={Casual} sx={{
+                                width: '250px',
+                                height: '250px',
+                                borderRadius: '10px',
+                                marginTop: !isTabletScreen ? '78px' : '45px',
+                                zIndex: 1,
+                                border: `1px solid ${theme.palette.primary.textPrimary}`,
+                                boxShadow: '10px 10px 20px #2c3e50'
+                            }}>
+                            </Avatar>
+                        </Container>
                     </Container>
+                    {!isTabletScreen ?
                     <Container style={{maxWidth: '500px'}}>
                         <Avatar elevation={5} src={Casual} sx={{
                                         width: '250px',
@@ -112,7 +125,7 @@ const AboutMe = () => {
                         <Box elevation={3} style={{border: `2px solid ${theme.palette.primary.textPrimary}`, 
                                         height: '250px', width: '250px', borderRadius: '10px', position: 'relative', bottom: '235px', left: '15px'}}>
                         </Box>
-                    </Container>
+                    </Container> : ''}
                 </Container>
                
             </Grid>
