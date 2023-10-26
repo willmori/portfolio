@@ -6,7 +6,6 @@ import MetalinguistCompanies from '../assets/MetalinguistCompanies.mp4';
 import Playwright from '../assets/Playwright.mp4';
 import CookBookSocial from '../assets/CookBookSocial.mp4';
 import Provisioning from '../assets/Provisioning.mp4';
-import TideTogether from '../assets/TideTogether.png';
 import ContributionContent from './ContributionContent';
 import { useMediaQuery } from '@mui/material';
 import './Contribution.css'
@@ -36,7 +35,6 @@ const Contribution = ({ name, placement }) => {
             case "Playwright": return Playwright;
             case "Provisioning": return Provisioning;
             case "CookBook_Social": return CookBookSocial;
-            case "Tide_Together": return TideTogether;
         }
     }
  
@@ -66,10 +64,9 @@ const Contribution = ({ name, placement }) => {
                             </Container>
                             <div className="tinted-video-wrapper" style={{position: 'relative', right: '97px'}}>
                                 <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
-                                    {name === "Tide_Together" 
-                                        ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
-                                        :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
-                                    }
+                                    
+                                    <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -83,10 +80,7 @@ const Contribution = ({ name, placement }) => {
                             <div style={{display: 'flex', flexDirection: 'column'}}>
                                 <div className="tinted-video-wrapper">
                                     <div style={{borderRadius: '10px', overflow: 'hidden', zIndex: 1, height: '342px', width: '600px', position: 'relative', top: '29px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
-                                    {name === "Tide_Together" 
-                                        ?   <img src={getVideoSource()} style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} />
-                                        :   <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
-                                    }
+                                        <video autoPlay loop muted style={{ width: '600px', height: '400px', position: 'relative', bottom: '29px'}} src={getVideoSource()}></video>
                                     </div>
                                     
                                 </div>
@@ -97,17 +91,9 @@ const Contribution = ({ name, placement }) => {
                 </Container>
                 :
                 <>
-                        <div ref={ref} onClick={toggle} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', border: `1px solid ${theme.palette.primary.textContrast}`}}>
-                            {name === "Tide_Together" 
-                                        ?   <img src={getVideoSource()} style={{ filter: contentOnTop ? 'blur(3px)' : '', width: '100%', height: 'auto', position: 'relative'}} />
-                                        :   <video autoPlay loop muted style={{ filter: contentOnTop ? 'blur(3px)' : '', width: '100%', height: 'auto', position: 'relative'}} src={getVideoSource()}></video>
-                                    }
-                            <Container style={{ width: '100%', height: 'auto', position: 'absolute',  zIndex: contentOnTop ? 1 : -1}}>
-                                    <ContributionContent name={name} placement={placement} />
-                                </Container>
-                        </div>
-                            
-                            
+                    <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', boxShadow: '10px 10px 20px #2c3e50'}}>
+                        <ContributionContent name={name} placement={placement} />
+                    </div>      
                 </>
             }
         </React.Fragment>

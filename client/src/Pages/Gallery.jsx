@@ -32,10 +32,9 @@ const Gallery = () => {
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
-                            <Contribution name="Companies" placement='odd'/>
-                            <Contribution name="Playwright" placement='even' />
-                            <Contribution name="Provisioning" placement='odd' />
-                            <Contribution name="Tide_Together" placement='even' />
+                            <Contribution name="Companies" placement='even'/>
+                            <Contribution name="Playwright" placement='odd' />
+                            <Contribution name="Provisioning" placement='even' />
                             <Contribution name="CookBook_Social" placement='odd' />
                             
                         </Container>     
@@ -47,31 +46,21 @@ const Gallery = () => {
                     <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                             <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
-                            {isSmallTablet ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>
+                            {isTabletScreen ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>
                             : <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Some Contribution Highlights</Typography>}
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
                             
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                {isTabletScreen ?
-                                <Tooltip title="Click on a card to toggle its view!" placement="top-end" open={true}>
-                                    <div>
-                                        <Contribution name="Companies" placement='odd' />
-                                    </div> 
-                                </Tooltip>
-                                :
-                                <Contribution name="Companies" placement='odd'/>}
+                                <Contribution name="Companies" placement='even'/>
                             </div>
                             
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                <Contribution name="Playwright" placement='even' />
+                                <Contribution name="Playwright" placement='odd' />
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                <Contribution name="Provisioning" placement='odd' />
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
-                                <Contribution name="Tide_Together" placement='even' />
+                                <Contribution name="Provisioning" placement='even' />
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
                                 <Contribution name="CookBook_Social" placement='odd' />

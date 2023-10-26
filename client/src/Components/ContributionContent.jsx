@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List, ListItemText, Link, IconButton } from '@mui/material';
+import { Button, Grid, Container, Avatar, Typography, Box, Paper, ListItem, List, ListItemText, Link, IconButton, Icon } from '@mui/material';
 import { useTheme } from '@mui/material';
 import ContributionText from '../Content/ContributionText';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import './ContributionContent.css'
 import { useMediaQuery } from '@mui/material';
+import MetalinguistCompanies from '../assets/MetalinguistCompanies.mp4';
+import Playwright from '../assets/Playwright.mp4';
+import CookBookSocial from '../assets/CookBookSocial.mp4';
+import Provisioning from '../assets/Provisioning.mp4';
 
 const ContributionContent = ({ name, placement }) => {
 
@@ -20,7 +25,6 @@ const ContributionContent = ({ name, placement }) => {
             case "Playwright": return ContributionText.Playwright.header;
             case "Provisioning": return ContributionText.Provisioning.header;
             case "CookBook_Social": return ContributionText.CookBook_Social.header;
-            case "Tide_Together": return ContributionText.Tide_Together.header;
             default: return "NOT FOUND";
         }
     }
@@ -31,7 +35,6 @@ const ContributionContent = ({ name, placement }) => {
             case "Playwright": return ContributionText.Playwright.subHeader;
             case "Provisioning": return ContributionText.Provisioning.subHeader;
             case "CookBook_Social": return ContributionText.CookBook_Social.subHeader;
-            case "Tide_Together": return ContributionText.Tide_Together.subHeader;
             default: return "NOT FOUND";
         }
     }
@@ -42,7 +45,6 @@ const ContributionContent = ({ name, placement }) => {
             case "Playwright": return ContributionText.Playwright.details;
             case "Provisioning": return ContributionText.Provisioning.details;
             case "CookBook_Social": return ContributionText.CookBook_Social.details;
-            case "Tide_Together": return ContributionText.Tide_Together.details;
             default: return "NOT FOUND";
         }
     }
@@ -53,7 +55,6 @@ const ContributionContent = ({ name, placement }) => {
             case "Playwright": return ContributionText.Playwright.tech_stack;
             case "Provisioning": return ContributionText.Provisioning.tech_stack;
             case "CookBook_Social": return ContributionText.CookBook_Social.tech_stack;
-            case "Tide_Together": return ContributionText.Tide_Together.tech_stack;
             default: return "NOT FOUND";
         }
     }
@@ -64,8 +65,16 @@ const ContributionContent = ({ name, placement }) => {
             case "Playwright": return ContributionText.Playwright.headerLink;
             case "Provisioning": return ContributionText.Provisioning.headerLink;
             case "CookBook_Social": return ContributionText.CookBook_Social.headerLink;
-            case "Tide_Together": return ContributionText.Tide_Together.headerLink;
             default: return "NOT FOUND";
+        }
+    }
+
+    function getVideoSource() {
+        switch(name) {
+            case "Companies": return MetalinguistCompanies;
+            case "Playwright": return Playwright;
+            case "Provisioning": return Provisioning;
+            case "CookBook_Social": return CookBookSocial;
         }
     }
 
@@ -100,32 +109,27 @@ const ContributionContent = ({ name, placement }) => {
             :
                 isTabletScreen ?
             
-                <Paper style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'rgba(32,33,36,0.98', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: isSmallTablet ? '8px' : '20px', width: '100%', height: 'auto'}}>
-                    <Typography><a className='underline-on-hover' style={{ fontSize: isSmallTablet ? '8px' : '', color: theme.palette.primary.textPrimary}} href={getHeaderLink()} target="_blank">{getHeader()}</a></Typography>
+                <Paper style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'rgba(32,33,36,0.98', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: '20px', width: '100%', height: 'auto'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
+                        <Typography><a className='underline-on-hover' style={{ color: theme.palette.primary.textPrimary}} href={getHeaderLink()} target="_blank">{getHeader()}</a></Typography>
+                        <a href={getVideoSource()} target="_blank" rel="noopener noreferrer">
+                            <OpenInNewIcon style={{color: theme.palette.primary.textContrast, cursor: 'pointer'}}/>
+                        </a>
+                    </div>
                     
-                    <Typography style={{position: 'relative', bottom: isSmallTablet ? '7px' : '', color: theme.palette.primary.textContrast, fontSize: isSmallTablet ? '12px' : '22px', fontWeight: 'bold', marginBottom: isSmallTablet ? '2px' : '15px'}}>{getSubHeader()} {isSmallTablet && name === 'CookBook_Social' ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
-                                                            "&:hover": {
-                                                            backgroundColor: "transparent",
-                                                            },
-                                                            padding: '0px'
-                                                        }}><GitHubIcon sx={{
-                                                            height: '12px',
-                                                            width: '12px',
-                                                            color: theme.palette.primary.contrastText,
-                                                            transition: 'transform 0.4s',
-                                                            "&:hover": {color: theme.palette.primary.textPrimary, transform: 'translateY(-4px)'}
-                                                        }}/></IconButton> : ''}</Typography>
                     
-                    <Paper style={{position: 'relative', bottom: isSmallTablet ? '7px' : '', padding: isSmallTablet ? '5px' : '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
-                        <Typography style={{fontSize: isSmallTablet ? '10px' : '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
+                    <Typography style={{position: 'relative', color: theme.palette.primary.textContrast, fontSize: '22px', fontWeight: 'bold', marginBottom: '15px'}}>{getSubHeader()}</Typography>
+                    
+                    <Paper style={{position: 'relative', padding: '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
+                        <Typography style={{fontSize: '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
                     </Paper>
-                    <Container style={{display: 'flex', marginTop: isSmallTablet ? '' : '10px', position: 'relative', right: !isSmallTablet ? '20px' : '15px', bottom: isSmallTablet ? '7px' : ''}}>
+                    <Container style={{display: 'flex', marginTop: '10px', position: 'relative', right: '20px' }}>
                         {getTechStack().map((tech) => (
-                                <Typography variant="body1" style={{ fontSize: isSmallTablet ? '7px' : '14px', padding: isSmallTablet ? '3px' : '10px', color: theme.palette.primary.textSecondary}}>
+                                <Typography variant="body1" style={{ fontSize: '14px', padding: '10px', color: theme.palette.primary.textSecondary}}>
                                     {tech}
                                 </Typography>))}
                     </Container>
-                    {name === "CookBook_Social" && !isSmallTablet ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
+                    {name === "CookBook_Social" ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
                                                             "&:hover": {
                                                             backgroundColor: "transparent",
                                                             }

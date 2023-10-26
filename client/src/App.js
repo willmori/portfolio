@@ -3,7 +3,6 @@ import { Button } from '@mui/material';
 import Home from './Pages/Home';
 import AboutMe from './Pages/AboutMe';
 import Contact from './Pages/Contact';
-import Experience from './Pages/Experience';
 import Gallery from './Pages/Gallery';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar.jsx';
