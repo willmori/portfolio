@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, List, ListItem, ListItemText, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
-import ThemeToggle from './ThemeToggle';
 import Fade from '@mui/material/Fade';
 import { HashLink } from 'react-router-hash-link';
 import { useMediaQuery } from '@mui/material';
