@@ -32,6 +32,7 @@ const Gallery = () => {
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
+                            <Contribution name="WebsiteBuilder" placement='odd'/>
                             <Contribution name="Companies" placement='even'/>
                             <Contribution name="Playwright" placement='odd' />
                             <Contribution name="Provisioning" placement='even' />
@@ -51,7 +52,9 @@ const Gallery = () => {
                             <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
                         </Container>
                         <Container style={{ display: 'flex', flexDirection: 'column'}}>
-                            
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
+                                <Contribution name="WebsiteBuilder" placement='odd'/>
+                            </div>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: isTabletScreen ? '50px' : '', paddingBottom: isTabletScreen ? '50px' : ''}}>
                                 <Contribution name="Companies" placement='even'/>
                             </div>

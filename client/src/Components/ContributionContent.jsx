@@ -10,6 +10,7 @@ import MetalinguistCompanies from '../assets/MetalinguistCompanies.mp4';
 import Playwright from '../assets/Playwright.mp4';
 import CookBookSocial from '../assets/CookBookSocial.mp4';
 import Provisioning from '../assets/Provisioning.mp4';
+import WebsiteBuilder from '../assets/WebsiteBuilder.mp4';
 
 const ContributionContent = ({ name, placement }) => {
 
@@ -21,6 +22,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getHeader() {
         switch(name) {
+            case "WebsiteBuilder": return ContributionText.WebsiteBuilder.header;
             case "Companies": return ContributionText.Companies.header;
             case "Playwright": return ContributionText.Playwright.header;
             case "Provisioning": return ContributionText.Provisioning.header;
@@ -31,6 +33,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getSubHeader() {
         switch(name) {
+            case "WebsiteBuilder": return ContributionText.WebsiteBuilder.subHeader;
             case "Companies": return ContributionText.Companies.subHeader;
             case "Playwright": return ContributionText.Playwright.subHeader;
             case "Provisioning": return ContributionText.Provisioning.subHeader;
@@ -41,6 +44,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getDetails() {
         switch(name) {
+            case "WebsiteBuilder": return ContributionText.WebsiteBuilder.details;
             case "Companies": return ContributionText.Companies.details;
             case "Playwright": return ContributionText.Playwright.details;
             case "Provisioning": return ContributionText.Provisioning.details;
@@ -51,6 +55,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getTechStack() {
         switch(name) {
+            case "WebsiteBuilder": return ContributionText.WebsiteBuilder.tech_stack;
             case "Companies": return ContributionText.Companies.tech_stack;
             case "Playwright": return ContributionText.Playwright.tech_stack;
             case "Provisioning": return ContributionText.Provisioning.tech_stack;
@@ -61,6 +66,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getHeaderLink() {
         switch(name) {
+            case "WebsiteBuilder": return ContributionText.WebsiteBuilder.headerLink;
             case "Companies": return ContributionText.Companies.headerLink;
             case "Playwright": return ContributionText.Playwright.headerLink;
             case "Provisioning": return ContributionText.Provisioning.headerLink;
@@ -71,6 +77,7 @@ const ContributionContent = ({ name, placement }) => {
 
     function getVideoSource() {
         switch(name) {
+            case "WebsiteBuilder": return WebsiteBuilder;
             case "Companies": return MetalinguistCompanies;
             case "Playwright": return Playwright;
             case "Provisioning": return Provisioning;
