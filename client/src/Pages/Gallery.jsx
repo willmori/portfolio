@@ -43,7 +43,7 @@ const Gallery = () => {
             </Grid> :
             <Grid style={{ marginTop: '300px' }} id="gallery">
                 <Container style={{maxWidth: '1300px', display: 'flex'}} >
-                    <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <Container style={{display: 'flex', flexDirection: 'column', paddingLeft: '0px', paddingRight: '0px'}}>
                         <Container ref={ref} style={{display: 'flex', alignItems: 'center', marginBottom: '15px'}} className={`fade-in-up ${inView ? 'is-visible' : ''}`}>
                             <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>03.&nbsp;&nbsp;</Typography>
                             {isTabletScreen ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Contributions</Typography>

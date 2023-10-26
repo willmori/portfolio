@@ -124,7 +124,7 @@ const ContributionContent = ({ name, placement }) => {
                         <Typography style={{fontSize: '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
                     </Paper>
                     <Container style={{display: 'flex', marginTop: '20px', position: 'relative', right: '20px' }}>
-                        <Grid style={{position: 'relative', left: isSmallTablet ? '10px' : ''}} container spacing={1}>
+                        <Grid style={{position: 'relative', left: isSmallTablet ? '8px' : ''}} container spacing={1}>
                         {getTechStack().map((tech) => (
                                 <Typography variant="body1" style={{ fontSize: '14px', padding: '10px', color: theme.palette.primary.textSecondary}}>
                                     {tech}
@@ -136,6 +136,8 @@ const ContributionContent = ({ name, placement }) => {
                                                             backgroundColor: "transparent",
                                                             }
                                                         }}><GitHubIcon sx={{
+                                                            position: 'relative',
+                                                            right: '5px',
                                                             height: '30px',
                                                             width: '30px',
                                                             color: theme.palette.primary.contrastText,
