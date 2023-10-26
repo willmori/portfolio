@@ -118,16 +118,18 @@ const ContributionContent = ({ name, placement }) => {
                     </div>
                     
                     
-                    <Typography style={{position: 'relative', color: theme.palette.primary.textContrast, fontSize: '22px', fontWeight: 'bold', marginBottom: '15px'}}>{getSubHeader()}</Typography>
+                    <Typography style={{position: 'relative', top: '-10px', color: theme.palette.primary.textContrast, fontSize: '22px', fontWeight: 'bold', marginBottom: '5px'}}>{getSubHeader()}</Typography>
                     
                     <Paper style={{position: 'relative', padding: '20px', backgroundColor: 'rgba(20, 35, 60, 0.95)', borderRadius: '10px'}}>
                         <Typography style={{fontSize: '16px', color: theme.palette.primary.textSecondary}}>{getDetails()}</Typography>
                     </Paper>
-                    <Container style={{display: 'flex', marginTop: '10px', position: 'relative', right: '20px' }}>
+                    <Container style={{display: 'flex', marginTop: '20px', position: 'relative', right: '20px' }}>
+                        <Grid style={{position: 'relative', left: isSmallTablet ? '10px' : ''}} container spacing={1}>
                         {getTechStack().map((tech) => (
                                 <Typography variant="body1" style={{ fontSize: '14px', padding: '10px', color: theme.palette.primary.textSecondary}}>
                                     {tech}
                                 </Typography>))}
+                        </Grid>
                     </Container>
                     {name === "CookBook_Social" ? <IconButton href='https://github.com/ucsb-cs148-w23/project-t01-cookbooksocial' target={"_blank"} sx={{
                                                             "&:hover": {

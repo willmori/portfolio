@@ -91,7 +91,7 @@ const Contribution = ({ name, placement }) => {
                 </Container>
                 :
                 <>
-                    <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxHeight: '460px', maxWidth: '700px', boxShadow: '10px 10px 20px #2c3e50'}}>
+                    <div ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden', zIndex: 5, maxWidth: '700px', boxShadow: '10px 10px 20px #2c3e50'}}>
                         <ContributionContent name={name} placement={placement} />
                     </div>      
                 </>
