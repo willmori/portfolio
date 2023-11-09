@@ -33,7 +33,7 @@ export const ContributionText = {
     "CookBook_Social": {
         "header": "CookBook Social",
         "subHeader": "Full-Stack Features",
-        "details": "Developed the homepage recipe feed to include diverse filtering capabilities and a 'likes' feature, enhancing user engagement. Additionally, architected REST APIs to optimize data interactions throughout the app.",
+        "details": "Developed an interactive homepage recipe feed to include diverse filtering capabilities and a 'likes' feature, enhancing user engagement. Additionally, architected RESTful APIs utilizing Firebase for scalability and reliability.",
         "tech_stack": ["React", "Tailwind", "Node.js", "Express.js", "Firebase"],
         "headerLink": "https://cookbook-social.herokuapp.com/login"
     }
