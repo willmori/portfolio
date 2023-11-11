@@ -13,6 +13,7 @@ import JavaScriptLogo from '../assets/JavaScript.png';
 import PythonLogo from '../assets/Python.png';
 import CLogo from '../assets/C++.png';
 import SQLLogo from '../assets/SQL.png';
+import SkillsSlider from '../Components/SkillSlider';
 
 const Skills = () => {
 
@@ -35,16 +36,7 @@ const Skills = () => {
                 <div style={{borderBottom: `1px solid rgb(140, 145, 175, 0.3)`, width: '260px', marginLeft: '20px'}}></div>
             </Container>
             <Container style={{maxWidth: '1100px'}}>
-                <Grid container align="center" style={{}}>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={ReactLogo} width={'180px'} height={'auto'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={MUILogo} width={'auto'} height={'70px'} type={'mui'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={NodeLogo} width={'215px'} height={'auto'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={Express} width={'auto'} height={'40px'} type={'express'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={JavaScriptLogo} width={'auto'} height={'60px'} type={'javascript'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={PythonLogo} width={'180px'} height={'auto'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={CLogo} width={'120px'} height={'auto'} />}</Grid>
-                    <Grid style={{marginBottom: '40px'}} item xs={12} sm={6} md={3} lg={3} xl={3}>{<SkillTile logo={SQLLogo} width={'120px'} height={'auto'} />}</Grid>
-                </Grid>
+                <SkillsSlider />
             </Container>
         </div>
         

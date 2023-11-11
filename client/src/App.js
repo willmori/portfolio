@@ -12,6 +12,8 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import { HashLink } from 'react-router-hash-link';
 import StarryNight from './StarryNight';
 import Skills from './Pages/Skills';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App(props) {
