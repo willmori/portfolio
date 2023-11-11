@@ -69,25 +69,34 @@ function SkillsSlider() {
     infinite: true, // Infinite looping
     speed: 500, // Animation speed
     slidesToShow: 3, // Number of tiles to show at once
-    slidesToScroll: 1, // Number of tiles to scroll at once
+    slidesToScroll: 3, // Number of tiles to scroll at once
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 4000, // Delay between each auto scroll
+    autoplaySpeed: 3000, // Delay between each auto scroll
     centerMode: true, // Enable centered view
     centerPadding: '0px', // Removes padding
     className: "center",
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 870,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 2,
+          slidesPerRow: 1
         }
       },
     ]
   };
 
   return (
-    <div style={{border: '1px solid red', marginLeft: '15px', marginRight: '15px'}}>
+    <div style={{marginLeft: '15px', marginRight: '15px'}}>
       <Slider {...settings}>
         {skills.map((skill, index) => (
           <div key={index}>
