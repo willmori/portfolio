@@ -15,6 +15,8 @@ import CLogo from '../assets/C++.png';
 import SQLLogo from '../assets/SQL.png';
 import ReactNative from '../assets/ReactNative.webp'
 
+import './SkillSlider.css';
+
 // Data for the skills
 const skills = [
   {
@@ -62,6 +64,37 @@ const skills = [
   // ... other skills
 ];
 
+// Custom Next Arrow
+function CustomNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="slick-next" // Use react-slick's built-in class for positioning
+        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '24px' }} // Your custom style
+        onClick={onClick}
+      >
+        {'>'}
+      </div>
+    );
+  }
+  
+  // Custom Prev Arrow
+  function CustomPrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="slick-prev" // Use react-slick's built-in class for positioning
+        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '24px' }} // Your custom style
+        onClick={onClick}
+      >
+        {'<'}
+      </div>
+    );
+  }
+  
+
+  
+
 function SkillsSlider() {
   // Settings for the slider
   const settings = {
@@ -75,6 +108,8 @@ function SkillsSlider() {
     centerMode: true, // Enable centered view
     centerPadding: '0px', // Removes padding
     className: "center",
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 870,
@@ -95,8 +130,10 @@ function SkillsSlider() {
     ]
   };
 
+  
+
   return (
-    <div style={{marginLeft: '15px', marginRight: '15px'}}>
+    <div style={{marginLeft: '15px', marginRight: '15px', cursor: 'grab'}} >
       <Slider {...settings}>
         {skills.map((skill, index) => (
           <div key={index}>

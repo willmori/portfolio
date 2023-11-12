@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, useTheme } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@mui/material';
 
 function SkillTile({ logo, width, height, type }) { 
 
@@ -11,6 +12,8 @@ function SkillTile({ logo, width, height, type }) {
         threshold: 0.2, // Percentage of component visibility to trigger
     });
 
+    const matches = useMediaQuery('(min-width:440px) and (max-width:600px)');
+
     return (
         <div>
             <div style={{ height: '230px', display: 'flex', flexDirection: 'column', 
@@ -20,7 +23,7 @@ function SkillTile({ logo, width, height, type }) {
                         top: '50%', 
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        width: '73%',
+                        width: matches ? '50%' : '73%',
                         height: '110%',
                         background: 'radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 65%)',
                         zIndex: 5, // Place it behind the logo
