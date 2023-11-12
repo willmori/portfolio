@@ -70,7 +70,7 @@ function CustomNextArrow(props) {
     return (
       <div
         className="slick-next" // Use react-slick's built-in class for positioning
-        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '24px' }} // Your custom style
+        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '30px' }} // Your custom style
         onClick={onClick}
       >
         {'>'}
@@ -84,7 +84,7 @@ function CustomNextArrow(props) {
     return (
       <div
         className="slick-prev" // Use react-slick's built-in class for positioning
-        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '24px' }} // Your custom style
+        style={{ display: 'block', color: 'rgb(140, 145, 175)', fontSize: '30px' }} // Your custom style
         onClick={onClick}
       >
         {'<'}
@@ -101,21 +101,29 @@ function SkillsSlider() {
     dots: true, // Show dot indicators
     infinite: true, // Infinite looping
     speed: 500, // Animation speed
-    slidesToShow: 3, // Number of tiles to show at once
-    slidesToScroll: 3, // Number of tiles to scroll at once
+    slidesToShow: 4, // Number of tiles to show at once
+    slidesToScroll: 1, // Number of tiles to scroll at once
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000, // Delay between each auto scroll
     centerMode: true, // Enable centered view
     centerPadding: '0px', // Removes padding
     className: "center",
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    nextArrow: null,
+    prevArrow: null,
+    swipeToSlide: true,
     responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
       {
         breakpoint: 870,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         }
       },
       {

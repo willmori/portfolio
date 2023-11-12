@@ -17,7 +17,7 @@ const Skills = () => {
     });
 
     return (
-        <div id="skills" style={{marginTop: !isTabletScreen ? '200px' : '50px'}}>
+        <div id="skills" style={{marginTop: !isTabletScreen ? '200px' : '0px'}}>
             <Container ref={ref} className={`fade-in-up ${inView ? 'is-visible' : ''}`} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '30px'}}>
                 <Typography variant="h5" style={{color: theme.palette.primary.textPrimary}}>02.&nbsp;&nbsp;</Typography>
                 {isSmallTablet ? <Typography sx={{ fontSize: '30px', fontWeight: 'bold' }} style={{color: 'rgb(210, 215, 240)'}}>Skills</Typography>

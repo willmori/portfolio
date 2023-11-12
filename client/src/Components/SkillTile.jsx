@@ -13,17 +13,18 @@ function SkillTile({ logo, width, height, type }) {
     });
 
     const matches = useMediaQuery('(min-width:440px) and (max-width:600px)');
+    const lessThanThree = useMediaQuery('(max-width:1080px)');
 
     return (
         <div>
-            <div style={{ height: '230px', display: 'flex', flexDirection: 'column', 
+            <div style={{ height: '230px', display: 'flex', flexDirection: 'column',
                         justifyContent: 'center', alignItems: 'center', borderRadius: '15px', position: 'relative'}}>
                 <div style={{
                         position: 'absolute',
                         top: '50%', 
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        width: matches ? '50%' : '73%',
+                        width: matches ? '50%' : lessThanThree ? '73%' : '83%',
                         height: '110%',
                         background: 'radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 65%)',
                         zIndex: 5, // Place it behind the logo
