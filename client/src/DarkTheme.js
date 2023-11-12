@@ -11,6 +11,12 @@ const darkTheme = createTheme({
         },
         // Customize other colors for dark mode
     },
+    typography: {
+        fontFamily: '"Titillium Web", sans-serif', // This will be your primary font for all text
+        // You can also customize other typography settings
+        
+        // ... other typography variants like h2, h3, body1, etc.
+      },
     components: {
         MuiButton: {
             styleOverrides: {

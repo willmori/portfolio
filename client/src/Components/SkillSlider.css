@@ -1,0 +1,24 @@
+/* Normal state of the dots */
+.slick-dots li button:before {
+    color: rgb(112, 198, 175); /* Change 'blue' to your desired color */
+  }
+  
+  /* Active state of the dot */
+  .slick-dots li.slick-active button:before {
+    color: rgb(125, 220, 195); /* Change 'red' to your desired active color */
+  }
+  
+  /* Hide the default arrows */
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-slider {
+    margin-top: 60px; /* Add your desired amount of margin */
+  }
+
+  .slick-slider .slick-dots {
+    bottom: -50px; /* Push up the dots by 25px */
+    position: absolute; /* This might already be set, but ensure it is if you're changing positioning */
+  }
