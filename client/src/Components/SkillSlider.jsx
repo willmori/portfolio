@@ -111,6 +111,7 @@ function SkillsSlider() {
     nextArrow: null,
     prevArrow: null,
     swipeToSlide: true,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1080,

@@ -1,6 +1,8 @@
 /* Normal state of the dots */
 .slick-dots li button:before {
     color: rgb(112, 198, 175); /* Change 'blue' to your desired color */
+    font-size: 12px;
+    line-height: 12px;
   }
   
   /* Active state of the dot */
